@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Curso de Mecânica</title>
+</head>
+
+<body>
+
+
+    <header class="header-container">
+        <nav class="nav-bar">
+            <img src="/Front-end/assets/img/logo.png" alt="Mecânica na Prática" class="logo-menu">
+
+            <ul class="menu-su" id="menuSu">
+                <li class="list"><a href="/index.html">Início</a></li>
+                <li class="list1"><a href="/Front-end/pages/curso.html">Cursos</a></li>
+                <li class="list"><a href="#">Níveis</a></li>
+                <li class="list"><a href="#">Biblioteca</a></li>
+                <li class="list"><a href="#">Sobre</a></li>
+            </ul>
+
+            <div class="button-entrar">
+                <div class="lupa"><i class='bx bx-search'></i></div>
+                <button type="button" class="Entrar"><i class='bx bx-user'></i>Entrar</button>
+                <button class="btn-hamburguer" id="btnHamburguer" onclick="toggleMenu()">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-box">
+        <div class="hero-wrapper">
+            <img src="/Front-end/assets/img/fotofundo.png" alt="Imagem de um carro na mecânica" class="imagem-fundo">
+            <section class="conteudo">
+                <div class="texto-mecanica">
+                    <p class="texto-Fut">Nossos Cursos</p>
+                    <h1 class="texto-aprenda"></h1>
+                    <h1 class="texto-auto"><span class="text-destaque">Do básico ao avançado</span> você no controle
+                    </h1>
+                    <p class="text-avacado"> Aqui você encontra um caminho completo para aprender mecânica automotiva,
+                        com aulas organizadas em módulos, capítulos e atividades práticas. Escolha seu nível e comece
+                        hoje mesmo a construir o seu conhecimento! </p>
+                </div>
+                <div class="conhecimento">
+                    <p class="motivacao">Mais conhecimento, mais oportunidade!</p>
+                </div>
+            </section>
+        </div>
+
+        <section>
+            <div class="nivel">
+                <div class="livro-modulo">
+
+                    <div class="icone-livro"><i class='bx bxs-graduation'></i></div>
+                    <div>
+                        <h1 class="escolha-nivel">Escolha seu módulo</h1>
+                    </div>
+
+                </div>
+
+                <div class="cursos-disponiveis">
+                    <p class="Aprenda-ritmo">Aprenda no seu ritmo e evolua de acordo com seu conhecimento.</p>
+                </div>
+
+
+
+            </div>
+
+            <div class="card-box">
+                <!-- CARD 1 -->
+                <div class="card verde">
+                    <div class="titulo-card">
+                        <div class="icone-box"><i class='bx bx-leaf'></i></div>
+                        <div class="titulo">
+                            <h3 class="modulo">Módulo 1</h3>
+                            <h2 class="inicio">Iniciante</h2>
+                        </div>
+                    </div>
+                    <p class="aprender-carro">Aqui você aprende os fundamentos da mecânica automotiva, desde o básico
+                        até a manutenção preventiva.</p>
+                    <p class="capitulo"><i class='bx bx-file'></i> 9 capítulos </p>
+                    <div class="porcentagem">
+                        <div>
+                            <p class="modulo-pro">Progresso do módulo</p>
+                        </div>
+                        <div>
+                            <p class="barra-porcentagem">0%</p>
+                        </div>
+                    </div>
+                    <div class="barra">
+                        <div class="Progresso"></div>
+                    </div>
+                    <p class="button-card"><a href="#">Ver conteúdo <i class='bx bx-right-arrow-alt'></i></a></p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card azul">
+                    <div class="titulo-card">
+                        <div class="icone-box"><i class='bx bx-cog'></i></div>
+                        <div class="titulo">
+                            <h3 class="modulo">Módulo 2</h3>
+                            <h2 class="inicio">Intermediário</h2>
+                        </div>
+                    </div>
+                    <p class="aprender-carro">Agora você aprofunda seus conhecimentos nos sistemas do veículo,
+                        aprendendo a diagnosticar e resolver problemas.</p>
+                    <p class="capitulo"><i class='bx bx-file'></i> 9 capítulos</p>
+                    <div class="porcentagem">
+                        <div>
+                            <p class="modulo-pro">Progresso do módulo</p>
+                        </div>
+                        <div>
+                            <p class="barra-porcentagem">0%</p>
+                        </div>
+                    </div>
+                    <div class="barra">
+                        <div class="Progresso"></div>
+                    </div>
+                    <p class="button-card"><a href="#">Ver conteúdo <i class='bx bx-right-arrow-alt'></i></a></p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card roxo">
+                    <div class="titulo-card">
+                        <div class="icone-box"><i class='bx bx-line-chart'></i></div>
+                        <div class="titulo">
+                            <h3 class="modulo">Módulo 3</h3>
+                            <h2 class="inicio">Avançado</h2>
+                        </div>
+                    </div>
+                    <p class="aprender-carro">Aqui você aprende os conteúdos mais complexos, como o motor por dentro,
+                        câmbio, diagnóstico avançado etc.</p>
+                    <p class="capitulo"><i class='bx bx-file'></i> 9 capítulos</p>
+                    <div class="porcentagem">
+                        <div>
+                            <p class="modulo-pro">Progresso do módulo</p>
+                        </div>
+                        <div>
+                            <p class="barra-porcentagem">0%</p>
+                        </div>
+                    </div>
+                    <div class="barra">
+                        <div class="Progresso"></div>
+                    </div>
+                    <p class="button-card"><a href="#">Ver conteúdo <i class='bx bx-right-arrow-alt'></i></a></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="funciona-box">
+                <div class="funcionamento">
+                    <div class="play"> <i class='bx bx-play'></i></div>
+                    <div>
+                        <h2 class="funciona">Como funciona?</h2>
+                        <p class="metodos">Nosso método é simples e direto, pensado para o seu aprendizado.</p>
+                    </div>
+
+                </div>
+                <div class="informacao-aula">
+
+                    <!-- Passo 1 -->
+                    <div class="passo">
+                        <div class="icone-aula"><i class='bx bxl-youtube'></i></div>
+                        <div class="info-aula">
+                            <p class="assistir-aula">1. Assista à aula</p>
+                            <p class="complemento">Videos explicativos e conteúdo prático.</p>
+                        </div>
+                    </div>
+
+                    <div class="icone-direita"><i class='bx bx-right-arrow-alt'></i></div>
+
+                    <!-- Passo 2 -->
+                    <div class="passo">
+                        <div class="icone-aula"><i class='bx bx-file'></i></div>
+                        <div class="info-aula">
+                            <p class="assistir-aula">2. Leia o material</p>
+                            <p class="complemento">Aprofunde seus conhecimentos.</p>
+                        </div>
+                    </div>
+
+                    <div class="icone-direita"><i class='bx bx-right-arrow-alt'></i></div>
+
+                    <!-- Passo 3 -->
+                    <div class="passo">
+                        <div class="icone-aula"><i class='bx bx-task'></i></div>
+                        <div class="info-aula">
+                            <p class="assistir-aula">3. Faça os exercícios</p>
+                            <p class="complemento">Fixe o que aprendeu com atividades.</p>
+                        </div>
+                    </div>
+
+                    <div class="icone-direita"><i class='bx bx-right-arrow-alt'></i></div>
+
+                    <!-- Passo 4 -->
+                    <div class="passo">
+                        <div class="icone-aula"><i class='bx bx-check-circle'></i></div>
+                        <div class="info-aula">
+                            <p class="assistir-aula">4. Conclua a aula</p>
+                            <p class="complemento">Ganhe pontos e avance no seu progresso.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="destaque-box">
+                <div class="card-destaque">
+                    <div class="passo1">
+                        <div class="estrela"><i class='bx bxs-star'></i></div>
+
+                        <div class="aula-curso">
+                            <h2 class="assistir-au">Destaque do curso</h2>
+                            <p class="complemento">Tudo o que você precisa aprender de verdade</p>
+                        </div>
+                    </div>
+
+                    <div class="passo1">
+                        <div class="icone-pratico">
+                            <i class='bx bx-play-circle'></i>
+                        </div>
+
+                        <div class="conteudo-organizado">
+                            <h3 class="assistir-au">Conteúdo organizado</h3>
+                            <p class="complemento">Do básico ao avançado, sem complicação.</p>
+                        </div>
+                    </div>
+
+                    <div class="passo1">
+                        <div class="icone-pratico">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+
+                        <div class="conteudo-organizado">
+                            <h3 class="assistir-au">Aprendizado prático</h3>
+                            <p class="complemento">Com exemplos reais e linguagem simples.</p>
+                        </div>
+                    </div>
+
+                    <div class="passo1">
+                        <div class="icone-pratico">
+                            <i class='bx bx-group'></i>
+                        </div>
+
+                        <div class="conteudo-organizado">
+                            <h3 class="assistir-au">Suporte e acompanhamento</h3>
+                            <p class="complemento">Acompanhe seu progresso e mantenha a motivação.</p>
+                        </div>
+                    </div>
+
+                    <div class="passo1">
+                        <div class="icone-pratico">
+                            <i class='bx bx-award'></i>
+                        </div>
+
+                        <div class="conteudo-organizado">
+                            <h3 class="assistir-au">Certificado de conclusão</h3>
+                            <p class="complemento">Mostre o que você aprendeu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-destaque">
+                    <div class="passo1">
+                        <div class="livro">
+                            <i class='bx bx-book-open'></i>
+                        </div>
+
+                        <div>
+                            <h2 class="assistir-au">Biblioteca do Mecânico</h2>
+                            <p class="complemento">Encontre conteúdos específicos sobre cada parte do veículo.</p>
+                        </div>
+                    </div>
+
+                    <div class="input-card">
+                        <input type="text" id="text" name="text" placeholder="O que você quer aprender?">
+                        <i class='bx bx-search'></i>
+                    </div>
+
+                    <div class="card-ferramenta">
+
+                        <div class="card-peca">
+                            <a href="#">
+                                <i class="fa-solid fa-car-side"></i>
+                                <p class="peça">Motor</p>
+                            </a>
+                        </div>
+
+                        <div class="card-peca">
+                            <a href="#">
+                                <i class="fa-solid fa-compact-disc"></i>
+                                <p class="peça">Freios</p>
+                            </a>
+                        </div>
+
+                        <div class="card-peca">
+                            <a href="#">
+                                <i class='bx bx-pulse'></i>
+                                <p class="peça">Suspensão</p>
+                            </a>
+                        </div>
+
+                        <div class="card-peca">
+                            <a href="#">
+                                <i class="fa-solid fa-car-battery"></i>
+                                <p class="peça">Elétrica</p>
+                            </a>
+                        </div>
+
+                        <div class="card-peca">
+                            <a href="#">
+                                <i class='bx bx-gas-pump'></i>
+                                <p class="peça">Injeção</p>
+                            </a>
+                        </div>
+
+                        <div class="card-peca">
+                            <a href="#">
+                                <i class="fa-solid fa-gears"></i>
+                                <p class="peça">Câmbio</p>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                    <div class="botao-biblioteca">
+                        <button type="button">Ver toda a biblioteca <i class='bx bx-right-arrow-alt'></i></button>
+                    </div>
+
+                </div>
+
+                <div class="card-destaque">
+                    <div class="alinhando-item">
+                        <div class="icone-alavancagem">
+                            <i class='bx bx-line-chart'></i>
+                        </div>
+
+                        <div class="aula-curso">
+                            <h2 class="assistir-au">Seu progresso</h2>
+                            <p class="complemento"> Veja o quanto você já evoluiu e o que ainda falta.</p>
+                        </div>
+                          </div>
+
+                        <div class="container-card">
+                            <div class="barra-circulo">
+                                <div class="circulo">
+                                    <div class="barra-interna">
+                                        <div class="number">65%</div>
+                                    </div>
+                                </div>
+                                <div class="barra-cor"></div>
+                            </div>
+                            <div>
+                                <p class="modulo-I">Módulo 1 - Iniciante</p>
+                                <p class="anda">Em andamento</p>
+
+                                <div class="barra-card">
+                                    <div class="cor-barra"></div>
+                                </div>
+                                <p class="capitulos">6 de 9 capítulos concluídos</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="ver-progresso">
+                                <div class="container-card">
+                                    <div class="trofeu"><i class='bx bxs-trophy'></i></div>
+                                    <div>
+                                        <p class="modulo-I">Você está indo muito bem!</p>
+                                        <p class="capitulos">Cada aula concluída te deixa mais perto do seu objetivo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                  
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Curso de Mecânica</title>
 </head>
 
@@ -14,84 +14,83 @@
 
     <header class="header-container">
         <nav class="nav-bar">
-            <img src="./Front-end/assets/img/logo.png" alt="Mecânica na Prática" class="logo-menu">
-            <ul class="menu-su">
-                <li class="list1"><a href="#">Início</a></li>
-                <li class="list"><a href="#">Cursos</a></li>
+            <img src="/Front-end/assets/img/logo.png" alt="Mecânica na Prática" class="logo-menu">
+            
+            <ul class="menu-su" id="menuSu">
+                <li class="list1"><a href="/index.html">Início</a></li>
+                <li class="list"><a href="/Front-end/pages/curso.html">Cursos</a></li>
                 <li class="list"><a href="#">Níveis</a></li>
                 <li class="list"><a href="#">Biblioteca</a></li>
                 <li class="list"><a href="#">Sobre</a></li>
             </ul>
+
             <div class="button-entrar">
                 <div class="lupa"><i class='bx bx-search'></i></div>
                 <button type="button" class="Entrar"><i class='bx bx-user'></i>Entrar</button>
+                <button class="btn-hamburguer" id="btnHamburguer" onclick="toggleMenu()">
+                    <i class='bx bx-menu'></i>
+                </button>
             </div>
-
         </nav>
     </header>
-    <hr class="linha">
 
     <main class="container-box">
-        <img src="./Front-end/assets/img/fotofundo.png" alt="Imagem de um carro na mecânica" class="imagem-fundo">
-        <section class="conteudo">
-
-            <div class="texto-mecanica">
-                <p class="texto-Fut">Seu futuro na mecânica começa aqui</p>
-                <h1 class="texto-aprenda">Aprenda mecânica</h1>
-                <h1 class="texto-auto">Automotiva do zero</h1>
-                <p class="text-avacado">Do básico ao <span class="dest-avançado">avançado</span>, com aulas práticas,
-                    passo a passo, mesmo que você nunca mexido em um carro.</p>
-            </div>
-            <div class="button-comecar">
-
-                <div class="comecar">
-                    <button type="button">
-                        <i class='bx bx-play'></i>
-                        Começar agora
-                        <i class='bx bx-right-arrow-alt'></i>
-                    </button>
-                    <div class="conhecimento">
-                        <p>Mais conhecimento, mais oportunidade!</p>
-                    </div>
+        <div class="hero-wrapper">
+            <img src="./Front-end/assets/img/fotofundo.png" alt="Imagem de um carro na mecânica" class="imagem-fundo">
+            <section class="conteudo">
+                <div class="texto-mecanica">
+                    <p class="texto-Fut">Seu futuro na mecânica começa aqui</p>
+                    <h1 class="texto-aprenda">Aprenda mecânica</h1>
+                    <h1 class="texto-auto">Automotiva do zero</h1>
+                    <p class="text-avacado">Do básico ao <span class="dest-avançado">avançado</span>, com aulas práticas, passo a passo, mesmo que você nunca tenha mexido em um carro.</p>
                 </div>
 
-
-
-                <div class="informacao">
-                    <div class="info-curso">
-                        <p><i class='bx bx-play-circle'></i> Videos explicativos</p>
+                <div class="button-comecar">
+                    <div class="comecar">
+                        <button type="button">
+                            <i class='bx bx-play'></i>
+                            Começar agora
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                        <div class="conhecimento">
+                            <p class="motivacao">Mais conhecimento, mais oportunidade!</p>
+                        </div>
                     </div>
-                    <hr class="info-linha">
-                    <div class="info-curso">
-                        <p><i class='bx bx-file'></i> Materias complementares</p>
-                    </div>
-                    <hr class="info-linha">
 
-                    <div class="info-curso">
-                        <p><i class='bx bx-check-square'></i> Quizzes e exercícios</p>
-                    </div>
-                    <hr class="info-linha">
-                    <div class="info-curso">
-                        <p><i class='bx bx-award'></i> Certificado de conclusão</p>
+                    <div class="informacao">
+                        <div class="info-curso">
+                            <p><i class='bx bx-play-circle'></i> Vídeos explicativos</p>
+                        </div>
+                        <hr class="info-linha">
+                        <div class="info-curso">
+                            <p><i class='bx bx-file'></i> Materiais complementares</p>
+                        </div>
+                        <hr class="info-linha">
+                        <div class="info-curso">
+                            <p><i class='bx bx-check-square'></i> Quizzes e exercícios</p>
+                        </div>
+                        <hr class="info-linha">
+                        <div class="info-curso">
+                            <p><i class='bx bx-award'></i> Certificado de conclusão</p>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-        </section>
+            </section>
+        </div>
 
         <section>
             <div class="nivel">
                 <h1 class="escolha-nivel">Escolha seu nível</h1>
                 <div class="cursos-disponiveis">
                     <p class="Aprenda-ritmo">Aprenda no seu ritmo e evolua de acordo com seu conhecimento.</p>
-                    <p class="todos-cursos"><a href="#">Ver todos os cursos </a><i class='bx bx-right-arrow-alt'></i>
+                    <p class="todos-cursos">
+                        <a href="#">Ver todos os cursos </a><i class='bx bx-right-arrow-alt'></i>
                     </p>
                 </div>
             </div>
 
             <div class="card-box">
-
-                <!-- CARD 1: INICIANTE (Verde) -->
+                <!-- CARD 1 -->
                 <div class="card verde">
                     <div class="titulo-card">
                         <div class="icone-box"><i class='bx bx-leaf'></i></div>
@@ -100,15 +99,12 @@
                             <h2 class="inicio">Iniciante</h2>
                         </div>
                     </div>
-
                     <p class="aprender-carro">Para quem nunca mexeu em um carro e quer aprender o básico.</p>
                     <p class="capitulo">9 capítulos • 81 aulas</p>
-
                     <p class="button-card"><a href="#">Ver conteúdo <i class='bx bx-right-arrow-alt'></i></a></p>
-
                 </div>
 
-                <!-- CARD 2: INTERMEDIÁRIO (Azul) -->
+                <!-- CARD 2 -->
                 <div class="card azul">
                     <div class="titulo-card">
                         <div class="icone-box"><i class='bx bx-cog'></i></div>
@@ -117,15 +113,12 @@
                             <h2 class="inicio">Intermediário</h2>
                         </div>
                     </div>
-
-                    <p class="aprender-carro">Para quem já conhece o básico e quer evoluir.</p>
+                    <p class="aprender-carro">Para quem já conhece o básico e quer evoluir o seu conhecimento.</p>
                     <p class="capitulo">9 capítulos • 81 aulas</p>
-
                     <p class="button-card"><a href="#">Ver conteúdo <i class='bx bx-right-arrow-alt'></i></a></p>
-
                 </div>
 
-                <!-- CARD 3: AVANÇADO (Roxo) -->
+                <!-- CARD 3 -->
                 <div class="card roxo">
                     <div class="titulo-card">
                         <div class="icone-box"><i class='bx bx-line-chart'></i></div>
@@ -134,33 +127,23 @@
                             <h2 class="inicio">Avançado</h2>
                         </div>
                     </div>
-
                     <p class="aprender-carro">Para quem quer se aprofundar e dominar a mecânica automotiva.</p>
                     <p class="capitulo">9 capítulos • 81 aulas</p>
-
                     <p class="button-card"><a href="#">Ver conteúdo <i class='bx bx-right-arrow-alt'></i></a></p>
-
                 </div>
-
             </div>
         </section>
 
-        <!--Parte da biblioteca da mecânica-->
+        <!-- Biblioteca da mecânica -->
         <section>
-            <!--Caixa principal da biblioteca-->
-
             <div class="biblioteca-container">
-
-                <div>
+                <div class="biblioteca-main">
                     <div class="biblioteca">
-
                         <div class="livro"><i class='bx bx-book-open'></i></div>
-
                         <div>
                             <h1 class="text-biblioteca">Biblioteca do Mecânico</h1>
-                            <p class="text-meca">Encontre conteúdos especificos sobre cada parte do veículo.</p>
+                            <p class="text-meca">Encontre conteúdos específicos sobre cada parte do veículo.</p>
                         </div>
-
                     </div>
 
                     <div class="input-box">
@@ -169,42 +152,36 @@
                     </div>
 
                     <div class="card-container">
-
                         <div class="biblioteca-card">
                             <a href="#">
                                 <i class="fa-solid fa-car-side"></i>
                                 <p class="peça">Motor</p>
                             </a>
                         </div>
-
                         <div class="biblioteca-card">
                             <a href="#">
                                 <i class="fa-solid fa-compact-disc"></i>
                                 <p class="peça">Freios</p>
                             </a>
                         </div>
-
                         <div class="biblioteca-card">
                             <a href="#">
                                 <i class='bx bx-pulse'></i>
                                 <p class="peça">Suspensão</p>
                             </a>
                         </div>
-
                         <div class="biblioteca-card">
                             <a href="#">
                                 <i class="fa-solid fa-car-battery"></i>
                                 <p class="peça">Elétrica</p>
                             </a>
                         </div>
-
                         <div class="biblioteca-card">
                             <a href="#">
                                 <i class='bx bx-gas-pump'></i>
                                 <p class="peça">Injeção</p>
                             </a>
                         </div>
-
                         <div class="biblioteca-card">
                             <a href="#">
                                 <i class="fa-solid fa-gears"></i>
@@ -212,7 +189,6 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="analise-problema">
@@ -222,7 +198,6 @@
 
                     <div class="solução">
                         <div class="problemas">
-
                             <div class="ferramenta">
                                 <i class="fa-solid fa-wrench"></i>
                             </div>
@@ -231,14 +206,13 @@
                                 <h3 class="identificar">O que pode ser?</h3>
                             </div>
                         </div>
-                        <p class="selecionar">Selecione o sintoma e aprenda a investigar as possíveis causas passo a
-                            passo.</p>
+                        <p class="selecionar">Selecione o sintoma e aprenda a investigar as possíveis causas passo a passo.</p>
 
                         <div class="sintoma">
                             <div class="dropdown">
                                 <div class="escolha-sintoma">
                                     <span>Escolha um sintoma...</span>
-                                    <button class="btn-sintoma" id="analise" onclick="clicando()">
+                                    <button class="btn-sintoma" onclick="dropMenu()">
                                         <i class='bx bx-chevron-right'></i>
                                     </button>
                                 </div>
@@ -258,46 +232,51 @@
     </main>
 
     <footer>
-        <section>
-            <div class="rodape-container">
+        <div class="rodape-container">
+            <div>
+                <p class="futuro">Mais que um curso,</p>
+                <p class="futuro">é um investimento no seu futuro.</p>
+            </div>
 
+            <div class="paginas">
+                <ul class="paginas-site">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Níveis</a></li>
+                    <li><a href="#">Biblioteca</a></li>
+                </ul>
+            </div>
+            
+            <div class="paginas">
+                <ul class="paginas-site">
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Políticas de privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="Contato">
+                <div class="contato-icone">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/5511937434350?text=Preciso%20de%20ajuda" target="_blank">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                </div>
                 <div>
-                    <p class="futuro">Mais que um curso,</p>
-                    <p class="futuro">é um investimento no seu futuro.</p>
-                </div>
-
-                <div class="paginas">
-                    <ul class="paginas-site">
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Cursos</a></li>
-                        <li><a href="#">Niveis</a></li>
-                        <li><a href="#">Biblioteca</a></li>
-                    </ul>
-                </div>
-                <div class="paginas">
-                    <ul class="paginas-site">
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Termos de uso</a></li>
-                        <li><a href="#">Políticas de privacidade</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="Contato">
-                    <div class="contato-icone">
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="https://wa.me/5511937434350?text=Preciso%20de%20ajuda" target="_blank">
-                            <i class='bx bxl-whatsapp'></i>
-                        </a>
-                    </div>
-
-                    <div>
-                        <p class=" disciplina">" Diciplina hoje, é liberdade amanhã."</p>
-                    </div>
+                    <p class="disciplina">"Disciplina hoje, é liberdade amanhã."</p>
                 </div>
             </div>
-        </section>
+        </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menuSu');
+            menu.classList.toggle('active');
+        
+        }
+    </script>
 </body>
 
 </html>
