@@ -1597,36 +1597,84 @@ text-align: left;
 }
 
 /*O que nos move*/
-
-.move{
+.move {
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 20px;
+    z-index: 20; /* Corrigido de 20px para 20 */
     background-color: #0c2333;
     padding: 25px;
     border-radius: 5px;
     opacity: 0.9;
 }
 
-.motivo-movente{
+.motivo-movente {
     color: #ccc;
 }
 
-.realizar-sonho{
+.realizar-sonho {
     color: #ccc;
     width: 250px;
     font-size: 15px;
 }
 
-.nossos-valores{
+.nossos-valores {
     margin-left: 150px;
     margin-top: 30px;
-    background-color: #04cbea;
+    background-color: #bdd3d6;
+    border-radius: 10px;
+    width: 100%; /* Corrigido de 100 para 100% */
+    max-width: 80%;
+    padding: 20px;
 }
 
-.valores{
-     display: flex;
+.diamante {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    padding: 10px 10px;
+}
+
+.historia-Nossa {
+    color: #0c2333;
+}
+
+.text-historia {
+    color: #334155;
+}
+
+.valores {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.tipo-valores {
+    padding: 10px 20px;
+    text-align: center;
+    max-width: 250px;
+    text-align: left;
+}
+
+.tipo-valores i {
+    color: #0c2333;
+    background-color: #bcebf2;
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 50%;
+    
+}
+
+.tipo {
+    color: #0A2533;
+    margin-bottom: 8px;
+}
+
+.valores-empresa {
+    color: #334155; /* Corrigido de verde para um tom escuro legível */
+    font-size: 14px;
+    line-height: 1.4;
+    width: 100%;
 }
