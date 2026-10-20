@@ -97,20 +97,21 @@ text-align: left;
     cursor: pointer;
 }
 
-.Entrar {
+.Entrar{
     border: 1px #40c8dc solid;
     background-color: #102a3c;
     padding: 6px 16px;
     border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Entrar a{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
     color: #40c8dc;
-    font-size: 16px;
-    cursor: pointer;
 }
-
 .btn-hamburguer {
     display: none;
     background: transparent;
@@ -129,24 +130,25 @@ text-align: left;
 .hero-wrapper {
     position: relative;
     width: 100%;
-    min-height: 500px;
-    background-color: #102a3c;
+    min-height: 400px;
     overflow: hidden;
 }
 
-.imagem-fundo {
+.imagem-fundo{
     width: 100%;
-    height: 100%;
-    min-height: 500px;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-}
-
-.conteudo {
     position: relative;
+   
+}
+.imagem-fundo img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+.conteudo {
+    position: absolute;
+    top: 0%;
+    left: 0;
     z-index: 40;
     width: 100%;
     max-width: 1300px;
@@ -220,6 +222,34 @@ text-align: left;
 
 .conhecimento .motivacao{
     position: absolute;
+    bottom: 20%;
+    right: 0;
+
+}
+
+/*posição de item pagina home*/
+.conheci p {
+    position: relative;
+    color: #ffffff;
+    transform: rotate(-10deg);
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    max-width: 220px;
+}
+.conheci p::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #40c8dc;
+    border-radius: 50% 20% 40% 10%;
+}
+.conheci .motiva{
+    position: absolute;
+    bottom: 30%;
     right: 0;
 
 }
@@ -633,21 +663,28 @@ text-align: left;
     display: block;
     font-size: 13px;
 }
-.dropdown i:hover{
-    transform: rotate( 90deg);
+/* Faz a seta girar para baixo quando o menu estiver ativo */
+#menu-Seta.rotate {
+    transform: rotate(90deg);
+}
+
+/* Garanta que a transição da seta seja suave */
+#menu-Seta {
+    transition: transform 0.3s ease;
 }
 .dropdown-menu li a:hover {
     background-color: #1e3e57;
     color: #40c8dc;
 
 }
-.dropdown:hover .dropdown-menu{
+.dropdown-menu.active{
     display: block;
 }
 
+
 /* Rodapé */
 .rodape-container {
-    border-top: 1px #40c8dc solid;
+    border-top: 1px #4b4b4b solid;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -667,6 +704,19 @@ text-align: left;
 .contato-icone i:hover { color: #40c8dc; }
 .disciplina { color: #ccc; font-size: 12px; }
 
+.direito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px #4b4b4b solid;
+    display: flex;
+    align-items: center;
+    background-color:#102A3C ;
+    padding: 10px 0 30px;
+}
+.reservados{ 
+    color:#aaa;
+}
 /* ===================================================
    MEDIA QUERIES (RESPONSIVIDADE MÓVEL)
    =================================================== */
@@ -795,6 +845,7 @@ text-align: left;
 .destaque-box{
     margin-left: 170px;
     margin-top: 60px;
+    margin-bottom: 30px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -907,14 +958,24 @@ text-align: left;
     width: 100%;
     padding: 10px;
     border-radius: 30px;
-    color: #0c2333;
+     border: 1px solid #329aaa;
     transition: 0.3s ease;
     cursor: pointer;
-    font-weight: 700;
+    
 }
-
+.botao-biblioteca button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #0c2333;
+}
+.botao-biblioteca button i{
+    font-size: 20px;
+}
 .botao-biblioteca button:hover{
     background-color: #40c8dc;
+    transform: scale(1.07);
 }
 
 /*card 3*/
@@ -972,12 +1033,14 @@ text-align: left;
     font-size: 14px;
     color: #555 ;
 }
+
+
 /*container pricipal*/
 .container-card{
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /*progresso circular*/
@@ -1045,4 +1108,517 @@ text-align: left;
     border-radius: 50%;
     padding: 5px 12px;
     text-align: center;
+}
+
+.button-progresso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #bcebf2;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #329aaa;
+}
+.button-progresso a{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #0c2333;
+    font-weight: 700;
+}
+
+.button-progresso a i{
+    font-size: 20px;
+}
+.button-progresso:hover{
+    background-color: #40c8dc;
+    transform: scale(1.07);
+}
+
+/* pagina login */
+
+.login-box {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Altura exata da tela para evitar rolagem */
+    margin: 0;
+    background-color: #ffffff;
+    overflow: hidden; /* Bloqueia qualquer transbordamento indesejado */
+}
+
+.container-cade {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.imagem-carro img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.novo {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 30;
+    text-align: left;
+}
+
+.Bem-Vindo {
+    color: #03ddff;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.frase-usu {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 350px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.dest-azul {
+    color: #03ddff;
+}
+
+.frase-text {
+    color: #fff;
+    width: 350px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.bloco-icone {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.icone-acesso i {
+    font-size: 30px;
+    color: #03ddff;
+    background-color: #1e3e57;
+    border: 1px #03ddff solid;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.acesse-curso {
+    color: #fff;
+}
+
+.continuar-login {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Parte do Login (Lado Direito Centralizado) */
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite rolar apenas o formulário caso a janela seja muito pequena */
+    margin-top: 50px;
+}
+
+.entrar-site {
+    text-align: left;
+    width: 100%;
+    max-width: 420px;
+}
+
+.entrar-conta {
+    color: #0A2533; /* Azul escuro oficial da imagem */
+}
+
+.continuar-log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 490px; /* Mesma largura dos seus inputs e botões */
+    color: #666666;   /* Cor do texto em cinza suave */
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    gap: 15px;        
+}
+
+.continuar-log::before,
+.continuar-log::after {
+    content: "";
+    flex: 1;                 
+    height: 1px;             
+    background-color: #D1D9E0;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px 15px 12px 40px; 
+    border-radius: 10px;
+    border: 1px solid #D1D9E0; /* Borda cinza clara e limpa */
+    background-color: #F0F4F8; /* Fundo gelo/claro igual ao da foto */
+    outline: none;
+    cursor: pointer;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.input-container input::placeholder {
+    color: #888888;
+}
+
+.input-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666666; /* Ícones em cinza harmônico */
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.esqueceu-senha {
+    text-align: right;
+    color: #00A8CC; /* Azul ciano oficial da imagem */
+    font-weight: 500;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    display: block;
+}
+
+.esqueceu-senha:hover {
+    color: #007B7F;
+    transform: scale(1.05);
+}
+
+.botao-login button {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px; 
+    border-radius: 30px;
+    background-color: #007B7F; /* Tom de verde-água/azul petróleo exato do botão da foto */
+    cursor: pointer;
+    border: none;
+}
+
+.botao-login button a {
+    font-size: 18px;
+    color: #ffffff; /* Texto branco para destacar no botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.botao-login button:hover {
+    background-color: #005F63;
+}
+
+.login-google button {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0c2333;
+    width: 100%;
+    max-width: 420px;
+    padding: 12px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-google button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #333333; /* Texto escuro suave para o botão social */
+    text-decoration: none;
+}
+
+.login-google button img {
+    height: 18px;
+    width: 18px;
+}
+
+.cadastro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #E6F8FA; /* Fundo ciano bem clarinho e suave, combinando com a foto */
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    border: 1px solid #BCECF2;
+    box-sizing: border-box;
+}
+
+.cad-icone i {
+    font-size: 30px;
+    background-color: #13d4ff; /* Ícone com o fundo no azul ciano da marca */
+    color: #0A2533;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.pergunta {
+    color: #000;
+    font-weight: 500;
+}
+
+.criar-cad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.criar-cad a {
+    outline: none;
+    color: #04cbea;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.criar-cad a:hover {
+    color: #0296ad;
+}
+
+.termos-cad {
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+
+.termos-cad a {
+    color: #04cbea;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*Página sobre nos*/
+
+
+.container-sobre{
+   position: relative;
+}
+.sobre-box {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 90%;
+    max-width: 900px; /* Aumentamos um pouco aqui para dar espaço */
+}
+.sobre{
+    position: relative;
+}
+/*Conteúdo da imagem*/
+.pagina-Sobre{
+    color: #03ddff;
+    font-size: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sobre-text{
+    color: #ccc;
+    font-weight: 600;
+    width: 370px;
+    letter-spacing: 2px;
+}
+
+.destaqueazul{
+    color: #03ddff;
+}
+
+.sobre-empresa{
+    position: relative; /* Mantém como você deixou */
+    display: flex;
+    justify-content: space-between; /* Joga um para cada ponta automaticamente */
+    align-items: flex-start;
+    width: 100%;
+}
+
+.historia{
+    color: #ccc;
+    width: 480px;
+}
+
+.sobreFuturo{
+    color: #ccc;
+    width: 200px;
+}
+
+.sobre-empresa {
+    display: flex;
+    align-items: flex-start; /* Alinha os dois no topo */
+    justify-content: space-between; /* Joga um na esquerda e outro na direita */
+    width: 100%; 
+    position: relative;
+    gap: 40px; /* Cria uma distância segura para eles não colarem */
+}
+
+.historia {
+    color: #ccc;
+    width: 100%;
+    max-width: 480px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.fut-sobre {
+    display: flex;
+    justify-content: flex-end; /* Garante que o texto dentro dele encoste na direita */
+    
+}
+
+.fut-sobre p{
+    position: relative;
+    color: #ffffff;
+    transform: rotate(-10deg);
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    max-width: 220px;
+    text-align: right; 
+    /* Alinha o texto bonitinho */
+}
+
+/* Corrigido o seletor para pegar direto a classe .sobreFuturo */
+.sobreFuturo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #40c8dc;
+    border-radius: 50% 20% 40% 10%;
+}
+
+.fut-sobre .sobreFuturo{
+    position: absolute;
+    bottom: 20%;
+    left: 100%;
+
+}
+
+.nossa-historia{
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.alvo-box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.alvo-icone{
+    font-size: 30px;
+    color: #023826;
+}
+.historia-Nossa{
+    color: #023826;
+}
+.text-historia{
+    color: #555;
+    width: 500px;
+}
+
+
+.arrumando-carro {
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Evita que qualquer elemento interno ultrapasse os limites */
+}
+
+.arrumando-carro img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;      /* Mantém a proporção correta da imagem para não distorcer */
+    display: block;    /* Remove espaços indesejados abaixo da imagem */
+    border-radius: 5px;
+}
+
+/*O que nos move*/
+
+.move{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 20px;
+    background-color: #0c2333;
+    padding: 25px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+.motivo-movente{
+    color: #ccc;
+}
+
+.realizar-sonho{
+    color: #ccc;
+    width: 250px;
+    font-size: 15px;
+}
+
+.nossos-valores{
+    margin-left: 150px;
+    margin-top: 30px;
+    background-color: #04cbea;
+}
+
+.valores{
+     display: flex;
+    align-items: center;
+    justify-content: center;
 }

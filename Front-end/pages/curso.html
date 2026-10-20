@@ -22,12 +22,12 @@
                 <li class="list1"><a href="/Front-end/pages/curso.html">Cursos</a></li>
                 <li class="list"><a href="#">Níveis</a></li>
                 <li class="list"><a href="#">Biblioteca</a></li>
-                <li class="list"><a href="#">Sobre</a></li>
+                <li class="list"><a href="/Front-end/pages/sobre.html">Sobre</a></li>
             </ul>
 
             <div class="button-entrar">
                 <div class="lupa"><i class='bx bx-search'></i></div>
-                <button type="button" class="Entrar"><i class='bx bx-user'></i>Entrar</button>
+                <button type="button" class="Entrar"><a href="/Front-end/pages/entrar.html"><i class='bx bx-user'></i>Entrar</a></button>
                 <button class="btn-hamburguer" id="btnHamburguer" onclick="toggleMenu()">
                     <i class='bx bx-menu'></i>
                 </button>
@@ -37,7 +37,9 @@
 
     <main class="container-box">
         <div class="hero-wrapper">
-            <img src="/Front-end/assets/img/fotofundo.png" alt="Imagem de um carro na mecânica" class="imagem-fundo">
+            <div class="imagem-fundo">
+                <img src="/Front-end/assets/img/ferramenta-carro.png" alt="Imagem de um carro na mecânica" >
+            </div>
             <section class="conteudo">
                 <div class="texto-mecanica">
                     <p class="texto-Fut">Nossos Cursos</p>
@@ -335,7 +337,7 @@
 
                     </div>
                     <div class="botao-biblioteca">
-                        <button type="button">Ver toda a biblioteca <i class='bx bx-right-arrow-alt'></i></button>
+                        <button type="button"><a href="#">Ver toda a biblioteca <i class='bx bx-right-arrow-alt'></i></a></button>
                     </div>
 
                 </div>
@@ -381,14 +383,64 @@
                                         <p class="capitulos">Cada aula concluída te deixa mais perto do seu objetivo.</p>
                                     </div>
                                 </div>
+                                
+                                 <button type="button" class="button-progresso"><a href="#">Ver meu Progresso <i class=" bx bx-right-arrow-alt"></i></a></button>
+                               
                             </div>
-                  
                 </div>
 
 
             </div>
         </section>
     </main>
+
+    
+    <footer>
+        <div>
+            <div class="rodape-container">
+            <div>
+                <p class="futuro">Mais que um curso,</p>
+                <p class="futuro">é um investimento no seu futuro.</p>
+            </div>
+                
+            <div class="paginas">
+                <ul class="paginas-site">
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/Front-end/pages/curso.html">Cursos</a></li>
+                    <li><a href="#">Níveis</a></li>
+                    <li><a href="#">Biblioteca</a></li>
+                </ul>
+            </div>
+              
+            
+            <div class="paginas">
+                <ul class="paginas-site">
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Políticas de privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+                
+            <div class="Contato">
+                <div class="contato-icone">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/5511937434350?text=Preciso%20de%20ajuda" target="_blank">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                </div>
+                <div>
+                    <p class="disciplina">"Disciplina hoje, é liberdade amanhã."</p>
+                </div>
+            </div>
+            
+        </div>
+         <div class="direito">
+            <p class="reservados">&copy; 2026 Mecânica na Prática. Todos os direitos reservados. </p>
+        </div>
+        </div>
+    </footer>
+
 
 </body>
 

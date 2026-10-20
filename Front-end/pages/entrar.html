@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Curso de Mecânica</title>
+</head>
+
+<body>
+
+
+    <header class="header-container">
+        <nav class="nav-bar">
+            <img src="/Front-end/assets/img/logo.png" alt="Mecânica na Prática" class="logo-menu">
+
+            <ul class="menu-su" id="menuSu">
+                <li class="list"><a href="/index.html">Início</a></li>
+                <li class="list"><a href="/Front-end/pages/curso.html">Cursos</a></li>
+                <li class="list"><a href="#">Níveis</a></li>
+                <li class="list"><a href="#">Biblioteca</a></li>
+                <li class="list"><a href="/Front-end/pages/sobre.html">Sobre</a></li>
+            </ul>
+
+            <div class="button-entrar">
+                <div class="lupa"><i class='bx bx-search'></i></div>
+                <button type="button" class="Entrar"><a href="/Front-end/pages/entrar.html"><i class='bx bx-user'></i>Entrar</a></button>
+                <button class="btn-hamburguer" id="btnHamburguer" onclick="toggleMenu()">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="login-box">
+                <div class="container-cade">
+                   <div class="imagem-carro"> <img src="/Front-end/assets/img/supra.png" alt="supra no fundo"></div>
+                   <div class="novo">
+                    <h4 class="Bem-Vindo">Bem-Vindo de volta!</h4>
+                    <h1 class="frase-usu">Sua Evolução <span class="dest-azul">começa aqui</span></h1>
+                    <p class="frase-text">Faça login e continue sua jornada no mundo da mecânica automotiva. Acesse seus cursos, acompanhe seu progresso e conquiste seus objetivos.</p>
+
+                    <div class="bloco-icone">
+                        <div class="icone-acesso"><i class='bx bx-book-open'></i></div>
+                        <div class="coisas-cursos">
+
+                            <h4 class="acesse-curso">Acesso aos seus cursos</h4>
+                            <p class="continuar-login">Continue onde parou.</p>
+                        </div>
+                    </div>
+
+                     <div class="bloco-icone">
+                        <div class="icone-acesso"><i class='bx bx-bar-chart-alt-2'></i></div>
+
+                        <div class="coisas-cursos">
+                            <h4 class="acesse-curso">Acompanhe seu progresso</h4>
+                            <p class="continuar-login">Veja sua evolução e conquistas.</p>
+                        </div>
+                    </div>
+
+                    <div class="bloco-icone">
+                        <div class="icone-acesso"><i class='bx bx-badge-check'></i></div>
+
+                        <div class="coisas-cursos">
+                            <h4 class="acesse-curso">Conteúdo exclusivo</h4>
+                            <p class="continuar-login">Materiais, exercícios e muito mais.</p>
+                        </div>
+                    </div>
+                   </div>
+                  
+                </div>
+                  
+                <div class="container-login">
+
+
+                    <div class="entrar-site">
+                        <h2 class="entrar-conta">Entrar na sua conta</h2> 
+                        <p class="continuar-log">Acompanhe seus cursos, acompanhe seu progresso e continue aprendendo.</p>
+
+                        <div class="input-container"><input type="email" name="email" id="email" required  placeholder= " E-mail " ><i class="bx bx-envelope"></i> </div>
+
+                       <div  class="input-container"> <input type="password" name="password" id="password" required placeholder="Senha" ><i class='bx bx-lock-alt'></i></div>
+                      
+
+                       <p class="esqueceu-senha">Esqueceu sua senha?</p>
+
+                       <div class="botao-login">
+                        <button type="button"><a href="#"><i class='bx bx-right-arrow-alt'></i> Entrar</a></button>
+                       </div>
+                        
+                       <p class="continuar-log">ou continuar com </p>
+
+                       <div class="login-google">
+                        <button type="button"><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google"> Entrar com o Google</a></button>
+                       </div>
+
+                       <div class="cadastro">
+                        <div class="cad-icone"><i class='bx bx-user-plus'></i></div>
+                        <div class="criar-conta">
+                            <p class="pergunta">Ainda não tem conta?</p>
+                            <p class="criar-cad"><a href="#">Cadastre-se agora <i class='bx bx-right-arrow-alt'></i></a></p>
+                        </div>
+                       </div>
+                       <p class="termos-cad">Ao continuar, você concorda com nossos <a href="#" class="termos-uso">Termos de Uso</a> e <a href="#" class="termos-uso">Política de Privacidade</a></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    </body>
+    </html>
