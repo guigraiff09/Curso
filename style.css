@@ -1677,12 +1677,12 @@ footer {
     align-items: center;
     justify-content: center;
     border-top: 1px rgba(255, 255, 255, 0.1) solid;
-    background-color: #102A3C;
+    background-color: #fff;
     padding: 15px 0 25px;
 }
 
 .reservados { 
-    color: #aaa;
+    color: #0A2533;
     font-size: 13px;
 }
 /* ===================================================
