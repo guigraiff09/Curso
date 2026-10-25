@@ -20,7 +20,9 @@ body {
     background-color: #f1f0f0;
 }
 
-/* Deixando o menu fixo */
+/* ==========================================
+   HEADER & MENU DE NAVEGAÇÃO
+   ========================================== */
 .header-container {
     width: 100%;
     position: fixed;
@@ -32,7 +34,7 @@ body {
 }
 
 .logo-menu {
-    width: 200px;
+    width: 180px;
     height: auto;
     object-fit: cover;
 }
@@ -60,7 +62,6 @@ body {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    
 }
 
 .list1 a:hover,
@@ -69,11 +70,10 @@ body {
 }
 
 .list a {
-text-align: left;
+    text-align: left;
     color: #ccc;
     cursor: pointer;
     font-size: 16px;
-    
 }
 
 .list a:hover {
@@ -97,7 +97,7 @@ text-align: left;
     cursor: pointer;
 }
 
-.Entrar{
+.Entrar {
     border: 1px #40c8dc solid;
     background-color: #102a3c;
     padding: 6px 16px;
@@ -105,13 +105,15 @@ text-align: left;
     font-size: 16px;
     cursor: pointer;
 }
-.Entrar a{
+
+.Entrar a {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
     color: #40c8dc;
 }
+
 .btn-hamburguer {
     display: none;
     background: transparent;
@@ -120,11 +122,13 @@ text-align: left;
     cursor: pointer;
 }
 
-/* Conteúdo principal */
+/* ==========================================
+   CONTEÚDO PRINCIPAL (INDEX & CURSOS)
+   ========================================== */
 .container-box {
     width: 100%;
     min-height: 100vh;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .hero-wrapper {
@@ -134,20 +138,22 @@ text-align: left;
     overflow: hidden;
 }
 
-.imagem-fundo{
+.imagem-fundo {
     width: 100%;
     position: relative;
-   
 }
-.imagem-fundo img{
+
+.imagem-fundo img {
     width: 100%;
     height: 400px;
     object-fit: cover;
     filter: brightness(0.65);
+    display: block;
 }
+
 .conteudo {
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 0;
     z-index: 40;
     width: 100%;
@@ -170,22 +176,27 @@ text-align: left;
 .texto-aprenda {
     text-transform: uppercase;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
 .texto-auto {
     text-transform: uppercase;
     color: #40c8dc;
-    font-size: 2.5rem;
-    width: 600px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    width: 100%;
+    max-width: 600px;
 }
-.text-destaque{
+
+.text-destaque {
     color: #ccc;
 }
+
 .text-avacado {
     color: #ccc;
     max-width: 500px;
     margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .dest-avançado {
@@ -194,40 +205,13 @@ text-align: left;
 
 .comecar {
     width: 100%;
-    margin-top: 25px;
+    display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.conhecimento p {
-    position: relative;
-    color: #ffffff;
-    transform: rotate(-10deg);
-    font-family: 'Caveat', cursive;
-    font-size: 24px;
-    font-weight: 600;
-    max-width: 220px;
-}
-
-.conhecimento p::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #40c8dc;
-    border-radius: 50% 20% 40% 10%;
-}
-
-.conhecimento .motivacao{
-    position: absolute;
-    bottom: 20%;
-    right: 0;
-
-}
-
-/*posição de item pagina home*/
+.conhecimento p,
 .conheci p {
     position: relative;
     color: #ffffff;
@@ -237,6 +221,8 @@ text-align: left;
     font-weight: 600;
     max-width: 220px;
 }
+
+.conhecimento p::after,
 .conheci p::after {
     content: '';
     position: absolute;
@@ -247,11 +233,17 @@ text-align: left;
     background-color: #40c8dc;
     border-radius: 50% 20% 40% 10%;
 }
-.conheci .motiva{
+
+.conhecimento .motivacao {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+}
+
+.conheci .motiva {
     position: absolute;
     bottom: 30%;
     right: 0;
-
 }
 
 .comecar button {
@@ -264,20 +256,20 @@ text-align: left;
     border-radius: 15px;
     cursor: pointer;
     font-weight: 600;
-    transition: 0.5s ease;
 }
 
 .comecar i {
     font-size: 20px;
 }
-.comecar button:hover{
+
+.comecar button:hover {
     background-color: #40c8dc;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Informações do curso */
 .informacao {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -311,19 +303,22 @@ text-align: left;
     margin: 0 auto;
 }
 
-.livro-modulo{
+.livro-modulo {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.icone-livro{
+
+.icone-livro {
     font-size: 35px;
     color: #102A3C;
 }
+
 .escolha-nivel {
     color: #102A3C;
     margin-bottom: 5px;
     font-weight: 700;
+    font-size: clamp(20px, 2.5vw, 28px);
 }
 
 .cursos-disponiveis {
@@ -337,6 +332,7 @@ text-align: left;
 .Aprenda-ritmo {
     color: #5e6c84;
     font-weight: 500;
+    font-size: 14px;
 }
 
 .todos-cursos a {
@@ -423,37 +419,43 @@ text-align: left;
     margin-bottom: 20px;
 }
 
-.capitulo i{
+.capitulo i {
     font-size: 20px;
 }
-.porcentagem{
+
+.porcentagem {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.barra-porcentagem{
+
+.barra-porcentagem {
     font-size: 13px;
     color: #334155;
 }
 
-.modulo-pro{
+.modulo-pro {
     font-size: 13px;
     color: #334155;
     margin-bottom: 10px;
 }
-.barra{
-    width: 330px;
+
+.barra {
+    width: 100%;
+    max-width: 330px;
     height: 10px;
     background-color: #aaa;
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.Progresso{
+
+.Progresso {
     height: 100%;
     width: 95%;
     background-color: #0c2333;
-    border-radius:10px ;
+    border-radius: 10px;
 }
+
 .button-card a {
     position: relative;
     z-index: 2;
@@ -471,47 +473,38 @@ text-align: left;
 .card.verde .icone-box i,
 .card.verde .button-card a { background-color: #00875A; }
 .card.verde .modulo, .card.verde .inicio { color: #00875A; }
-.card.verde .capitulo i {color: #00875A;}
+.card.verde .capitulo i { color: #00875A; }
 
 .card.azul .icone-box i,
 .card.azul .button-card a { background-color: #0065FF; }
 .card.azul .modulo, .card.azul .inicio { color: #0065FF; }
-.card.azul .capitulo i {color: #0065FF;}
+.card.azul .capitulo i { color: #0065FF; }
 
 .card.roxo .icone-box i,
 .card.roxo .button-card a { background-color: #5243AA; }
 .card.roxo .modulo, .card.roxo .inicio { color: #5243AA; }
-.card.roxo .capitulo i {color: #5243AA;}
+.card.roxo .capitulo i { color: #5243AA; }
 
-.card.verde .button-card a:hover {
-    background-color: #00724c;
-    transform: scale(1.1);
-}
+.card.verde .button-card a:hover { background-color: #00724c; transform: scale(1.05); }
+.card.azul .button-card a:hover { background-color: #014ab8; transform: scale(1.05); }
+.card.roxo .button-card a:hover { background-color: #392d7d; transform: scale(1.05); }
 
-.card.azul .button-card a:hover {
-    background-color: #014ab8;
-    transform: scale(1.1);
-}
-
-.card.roxo .button-card a:hover {
-    background-color: #392d7d;
-    transform: scale(1.1);
-}
-
-/* Biblioteca de Mecânico */
+/* ==========================================
+   BIBLIOTECA & ANÁLISE DE PROBLEMAS
+   ========================================== */
 .biblioteca-container {
     padding: 40px 60px;
     background-color: #102a3c;
     width: 100%;
     display: flex;
-    justify-content: space-betweenJ;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
 }
 
 .biblioteca-main {
-    flex: 1 1 500px;
+    position: relative;
 }
 
 .biblioteca {
@@ -526,13 +519,14 @@ text-align: left;
     color: #40c8dc;
 }
 
-.text-biblioteca { color: #fff; font-size: 1.8rem; }
+.text-biblioteca { color: #fff; font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 .text-meca { color: #ccc; font-size: 14px; }
 
 .input-box {
     position: relative;
     margin-bottom: 30px;
     max-width: 600px;
+    width: 100%;
 }
 
 .input-box input {
@@ -582,25 +576,22 @@ text-align: left;
 .peça { color: #ccc; font-size: 12px; margin-top: 5px; }
 
 /* Análise de problemas */
-
-.analise-problema{
-
+.analise-problema {
     position: relative;
-
+    width: 100%;
+    max-width: 600px;
 }
 
-.motor-carro img{
-    width: 600px;
+.motor-carro img {
+    width: 100%;
     height: 250px;
     border-radius: 20px;
     object-fit: cover;
+    display: block;
 }
-
-
-
 .solução{
     position: absolute;
-    bottom: 2%;
+    bottom: 0%;
     left: 30%;
     background-color: #102a3c;
     padding: 43px 25px 55px ;
@@ -613,8 +604,9 @@ text-align: left;
 .ferramenta i { color: #ccc; font-size: 26px; }
 .selecionar { color: #ccc; margin: 10px 0 15px; font-size: 13px; }
 
+
 /* Dropdown */
-.dropdown { position: relative; width: 100%;}
+.dropdown { position: relative; width: 100%; }
 
 .escolha-sintoma {
     position: relative;
@@ -625,6 +617,7 @@ text-align: left;
     padding: 10px 14px;
     color: #ccc;
     font-size: 14px;
+    background-color: #0b1d29;
 }
 
 .btn-sintoma {
@@ -639,7 +632,6 @@ text-align: left;
     justify-content: center;
     cursor: pointer;
     border-radius: 0 4px 4px 0;
-    transition: 0.5s ease
 }
 
 .btn-sintoma i { font-size: 22px; color: #0c2333; }
@@ -663,138 +655,52 @@ text-align: left;
     display: block;
     font-size: 13px;
 }
-/* Faz a seta girar para baixo quando o menu estiver ativo */
+
 #menu-Seta.rotate {
     transform: rotate(90deg);
 }
 
-/* Garanta que a transição da seta seja suave */
 #menu-Seta {
     transition: transform 0.3s ease;
 }
+
 .dropdown-menu li a:hover {
     background-color: #1e3e57;
     color: #40c8dc;
-
 }
-.dropdown-menu.active{
+
+.dropdown-menu.active {
     display: block;
 }
 
-
-/* Rodapé */
-.rodape-container {
-    border-top: 1px #4b4b4b solid;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    background-color: #102A3C;
-    padding: 40px 100px;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.futuro { color: #ccc; font-size: 14px; }
-.paginas-site li a { color: #ccc; font-size: 14px; }
-.paginas-site li a:hover { color: #40c8dc; }
-
-.Contato { text-align: left; }
-.contato-icone { display: flex; gap: 15px; margin-bottom: 10px; }
-.contato-icone i { font-size: 26px; color: #ccc; }
-.contato-icone i:hover { color: #40c8dc; }
-.disciplina { color: #ccc; font-size: 12px; }
-
-.direito{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px #4b4b4b solid;
-    display: flex;
-    align-items: center;
-    background-color:#102A3C ;
-    padding: 10px 0 30px;
-}
-.reservados{ 
-    color:#aaa;
-}
-/* ===================================================
-   MEDIA QUERIES (RESPONSIVIDADE MÓVEL)
-   =================================================== */
-
-@media screen and (max-width: 992px) {
-    .header-container { padding: 10px 20px; }
-    .btn-hamburguer { display: block; z-index: 200; position: relative;}
-    
-    .menu-su {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        max-width: 220px;
-        height: 100vh;
-        background-color: #102a3c;
-        flex-direction: column;
-        padding: 100px 20px;
-        gap: 20px;
-        display: none;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-        
-    }
-
-    .menu-su.active { display: flex; }
-
-    .texto-aprenda, .texto-auto { font-size: 2rem; }
-    .nivel, .card-box, .biblioteca-container, .rodape-container { padding: 30px 20px; }
-    
-    .solução { position: relative; bottom: 0; margin-top: -30px; }
-}
-
-@media screen and (max-width: 576px) {
-
-    .imagem-fundo{
-        width: 100%;
-        max-width: 700px;
-        height: auto;
-    }
-    .texto-aprenda, .texto-auto { font-size: 1.5rem; }
-    
-    .comecar { flex-direction: column; align-items: flex-start; }
-    .conhecimento p { transform: none; margin-top: 10px; }
-    
-    .info-linha { display: none; }
-    .informacao { flex-direction: column; align-items: flex-start; gap: 10px; }
-
-    .card-container { justify-content: center; }
-    .biblioteca-card { width: 45%; }
-
-    .rodape-container { flex-direction: column; text-align: center; align-items: center; }
-    .Contato { text-align: center; }
-
-}
-
-/*Pagina cursos funcionamento*/
-.box-funciona{
+/* ==========================================
+   PÁGINA DE CURSOS (FUNCIONAMENTO E DESTAQUES)
+   ========================================== */
+.box-funciona {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
+    padding: 0 20px;
 }
-.funciona-box{
+
+.funciona-box {
     border: 1px #E2E8F0 solid;
     border-radius: 10px;
     padding: 30px 20px;
     width: 100%;
     max-width: 1200px;
-    background-color: #fff;  
+    background-color: #fff;
 }
-.funcionamento{
+
+.funcionamento {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-.play i{
+.play i {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -803,115 +709,124 @@ text-align: left;
     background-color: #102A3C;
     padding: 8px;
     border-radius: 50px;
-    text-align: center;
-    
 }
 
-/* Agrupa o ícone e as frases de cada passo lado a lado */
 .passo {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-/* Garante alinhamento vertical dos 4 passos no container principal */
 .informacao-aula {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
-.icone-aula i{
-    font-size: 30px; 
+.icone-aula i {
+    font-size: 30px;
     background-color: #ccc;
     padding: 12px;
     border-radius: 30px;
     color: #102A3C;
 }
 
-.assistir-au{
-   color: #102A3C;
-   font-size: 20px;
+.assistir-au, .assistir-aula {
+    color: #102A3C;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.complemento{
+.funciona {
+    color: #102A3C;
+    font-size: 22px;
+}
+
+.metodos {
     color: #5E6C84;
-    font-size: 15px;
+    font-size: 14px;
 }
 
-.icone-direita{
+.complemento {
+    color: #5E6C84;
+    font-size: 14px;
+}
+
+.icone-direita {
     color: #ddd;
     font-size: 25px;
 }
 
-/*Destaque do curso*/
-.destaque-box{
-    margin-left: 170px;
-    margin-top: 60px;
-    margin-bottom: 30px;
+/* Destaque do curso / Cards específicos */
+.destaque-box {
+    max-width: 1300px;
+    margin: 60px auto 30px auto;
     display: flex;
-    gap: 20px;
-    align-items: center;
+    gap: 30px;
+    align-items: stretch;
     justify-content: center;
-    gap: 20px;
-
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
-.card-destaque{
+
+.card-destaque {
     width: 100%;
     max-width: 390px;
-    height: 500px;
     border: 1px #5e6c84 solid;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 20px;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.aula-curso{
+.aula-curso {
     padding: 8px 0;
 }
-.estrela i{
-    font-size: 30px; 
+
+.estrela i {
+    font-size: 30px;
     color: #ffc300;
 }
-.assistir-aul{
-    color: #102a3c;
-}
-.passo1{
+
+.passo1 {
     display: flex;
     gap: 15px;
     align-items: center;
-    
+    margin-bottom: 15px;
 }
-.icone-pratico i{
+
+.icone-pratico i {
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
     color: #0bab76;
     background-color: #ccc;
-    padding: 12px;
+    padding: 10px;
     border-radius: 40px;
 }
 
-.conteudo-organizado{
-    padding: 10px 0;
+.conteudo-organizado {
+    padding: 5px 0;
 }
 
-/*card dois do destaque*/
-.input-card{
-    margin-top: 30px;
+.input-card {
+    margin-top: 20px;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
-.input-card input{
+
+.input-card input {
     width: 100%;
     background-color: #ccc;
     border-radius: 10px;
     padding: 12px 50px 12px 15px;
     font-size: 14px;
-
 }
 
-.input-card i{
+.input-card i {
     position: absolute;
     top: 50%;
     right: 0;
@@ -925,40 +840,32 @@ text-align: left;
     color: #102a3c;
 }
 
-.card-ferramenta{
+.card-ferramenta {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
-.card-peca{
+.card-peca {
     border: 1px #334155 solid;
-    width: 90px;
-    padding: 10px 10px;
+    padding: 10px;
     text-align: center;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s ease;
     background-color: #102a3c;
 }
 
-.card-peca a i{
-    color: #ccc;
-}
+.card-peca a i { color: #ccc; }
+.card-peca:hover { transform: scale(1.05); }
 
-.card-peca:hover{
-   transform: scale(1.1);
-}
-
-.botao-biblioteca{
+.botao-biblioteca {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 78px;
+    margin-top: 30px;
 }
 
-.botao-biblioteca button{
+.botao-biblioteca button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -966,115 +873,102 @@ text-align: left;
     width: 100%;
     padding: 10px;
     border-radius: 30px;
-     border: 1px solid #329aaa;
-    transition: 0.3s ease;
+    border: 1px solid #329aaa;
     cursor: pointer;
-    
 }
-.botao-biblioteca button a{
+
+.botao-biblioteca button a {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     font-weight: 700;
     color: #0c2333;
 }
-.botao-biblioteca button i{
-    font-size: 20px;
-}
-.botao-biblioteca button:hover{
-    background-color: #40c8dc;
-    transform: scale(1.07);
-}
 
-/*card 3*/
-
-/*alinhando texto e icone*/
-
-.alinhando-item{
+.alinhando-item {
     display: flex;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.icone-alavancagem i{
-    font-size: 30px;
-    background-color: #102A3C;
-    color: #ccc;
-    padding: 5px;
-    border-radius: 8px;
-}
-
-.modulo-I{
-    color: #102A3C;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.anda {
-    background-color: #7dedc7;
-    padding: 3px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #023826;
-    width: 140px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.barra-card{
-    background-color: #aaa;
-    width: 100%;
-    height: 15px;
-    border-radius: 20px;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
-.cor-barra{
+.icone-alavancagem i {
+    font-size: 30px;
+    background-color: #102A3C;
+    color: #ccc;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.modulo-I {
+    color: #102A3C;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.anda {
+    background-color: #7dedc7;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #023826;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.barra-card {
+    background-color: #aaa;
+    width: 100%;
+    height: 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.cor-barra {
     width: 90%;
-    height: 15px;
-    border-radius:20px;
+    height: 100%;
     background-color: #00875A;
+    border-radius: 20px;
 }
 
-.capitulos{
-    font-size: 14px;
-    color: #555 ;
+.capitulos {
+    font-size: 13px;
+    color: #555;
 }
 
-
-/*container pricipal*/
-.container-card{
+.container-card {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-/*progresso circular*/
+/* Progresso circular */
 .barra-circulo {
     position: relative;
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
 }
 
 .circulo {
     position: relative;
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    /* O gradiente cônico cria o verde com base na variável e o cinza no restante */
-    background: conic-gradient(#00875A var(--porcentagem, 65%), #aaa 0%);
+    background: conic-gradient(#00875A 65%, #aaa 0%);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
 }
 
 .barra-interna {
-    height: 70px; /* Tamanho menor para deixar a borda com 20px de espessura */
-    width: 70px;
-    background-color: #fff; /* O miolo branco que tampa o meio da "pizza" */
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1084,41 +978,31 @@ text-align: left;
 .number {
     font-weight: 700;
     color: #555;
+    font-size: 14px;
 }
 
-/* Você pode remover ou deixar a .barra-cor vazia no HTML, pois não precisaremos mais dela com essa técnica */
-
-.barra-cor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    /* Criamos o preenchimento em formato de rosca usando conic-gradient */
-    background: conic-gradient(#00875A var(--porcentagem, 10%), transparent var(--porcentagem, 0%) 100%);
-    /* Usamos uma máscara para manter apenas a borda (o anel) */
-    -webkit-mask: radial-gradient(farthest-side, transparent 49%, #fff 50%);
-    mask: radial-gradient(farthest-side, transparent 49%, #fff 50%);
-    pointer-events: none;
+.ver-progresso {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
 }
 
-.ver-progresso{
-    background-color: #ddd;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.trofeu{
+.trofeu {
     color: #fff;
-    font-size: 30px;
+    font-size: 24px;
     background-color: #ffc300;
     border-radius: 50%;
-    padding: 5px 12px;
-    text-align: center;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.button-progresso{
+.button-progresso {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1127,59 +1011,53 @@ text-align: left;
     width: 100%;
     padding: 10px;
     border-radius: 30px;
-    transition: 0.3s ease;
     cursor: pointer;
     border: 1px solid #329aaa;
+    margin-top: 15px;
 }
-.button-progresso a{
-     display: flex;
+
+.button-progresso a {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     color: #0c2333;
     font-weight: 700;
+    font-size: 14px;
 }
 
-.button-progresso a i{
-    font-size: 20px;
-}
-.button-progresso:hover{
-    background-color: #40c8dc;
-    transform: scale(1.07);
-}
-
-/* pagina login */
-
+/* ==========================================
+   PÁGINA DE LOGIN
+   ========================================== */
 .login-box {
     display: flex;
     width: 100%;
-    height: 100vh; /* Altura exata da tela para evitar rolagem */
-    margin: 0;
+    min-height: calc(100vh - 80px);
     background-color: #ffffff;
-    overflow: hidden; /* Bloqueia qualquer transbordamento indesejado */
 }
 
 .container-cade {
     position: relative;
     width: 50%;
-    height: 100%;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
     overflow: hidden;
 }
 
 .imagem-carro img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .novo {
     position: absolute;
-    top: 20%;
-    left: 10%;
+    top: 15%;
+    left: 8%;
+    right: 8%;
     z-index: 30;
     text-align: left;
 }
@@ -1188,15 +1066,16 @@ text-align: left;
     color: #03ddff;
     font-weight: 400;
     text-transform: uppercase;
+    font-size: 14px;
 }
 
 .frase-usu {
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
-    width: 350px;
-    font-size: 40px;
+    font-size: clamp(22px, 3vw, 38px);
     margin-bottom: 10px;
+    line-height: 1.2;
 }
 
 .dest-azul {
@@ -1205,49 +1084,49 @@ text-align: left;
 
 .frase-text {
     color: #fff;
-    width: 350px;
+    max-width: 400px;
     font-weight: 400;
-    margin-bottom: 30px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .bloco-icone {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 10px;
 }
 
 .icone-acesso i {
-    font-size: 30px;
+    font-size: 22px;
     color: #03ddff;
     background-color: #1e3e57;
     border: 1px #03ddff solid;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50%;
 }
 
 .acesse-curso {
     color: #fff;
+    font-size: 14px;
 }
 
 .continuar-login {
     color: #ccc;
-    margin-bottom: 10px;
+    font-size: 12px;
+    margin-bottom: 0;
 }
 
-/* Parte do Login (Lado Direito Centralizado) */
+/* Lado Direito do Login */
 .container-login {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 100%;
-    position: relative;
-    margin: 0;
+    padding: 40px 20px;
     box-sizing: border-box;
-    overflow-y: auto; /* Permite rolar apenas o formulário caso a janela seja muito pequena */
-    margin-top: 50px;
 }
 
 .entrar-site {
@@ -1257,7 +1136,8 @@ text-align: left;
 }
 
 .entrar-conta {
-    color: #0A2533; /* Azul escuro oficial da imagem */
+    color: #0A2533;
+    font-size: 24px;
 }
 
 .continuar-log {
@@ -1265,19 +1145,18 @@ text-align: left;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 490px; /* Mesma largura dos seus inputs e botões */
-    color: #666666;   /* Cor do texto em cinza suave */
-    font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    gap: 15px;        
+    color: #666666;
+    font-size: 13px;
+    margin: 15px 0;
+    gap: 15px;
+    text-align: center;
 }
 
 .continuar-log::before,
 .continuar-log::after {
     content: "";
-    flex: 1;                 
-    height: 1px;             
+    flex: 1;
+    height: 1px;
     background-color: #D1D9E0;
 }
 
@@ -1285,19 +1164,16 @@ text-align: left;
     position: relative;
     width: 100%;
     max-width: 420px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .input-container input {
     width: 100%;
-    padding: 12px 15px 12px 40px; 
+    padding: 12px 15px 12px 40px;
     border-radius: 10px;
-    border: 1px solid #D1D9E0; /* Borda cinza clara e limpa */
-    background-color: #F0F4F8; /* Fundo gelo/claro igual ao da foto */
-    outline: none;
-    cursor: pointer;
+    border: 1px solid #D1D9E0;
+    background-color: #F0F4F8;
     color: #333;
-    box-sizing: border-box;
 }
 
 .input-container input::placeholder {
@@ -1309,52 +1185,39 @@ text-align: left;
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #666666; /* Ícones em cinza harmônico */
+    color: #666666;
     font-size: 18px;
-    pointer-events: none;
 }
 
 .esqueceu-senha {
     text-align: right;
-    color: #00A8CC; /* Azul ciano oficial da imagem */
+    color: #00A8CC;
     font-weight: 500;
+    font-size: 14px;
     margin-bottom: 20px;
-    cursor: pointer;
-    transition: 0.4s ease;
     display: block;
-}
-
-.esqueceu-senha:hover {
-    color: #007B7F;
-    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .botao-login button {
-    position: relative;
     width: 100%;
     max-width: 420px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px; 
+    padding: 12px;
     border-radius: 30px;
-    background-color: #007B7F; /* Tom de verde-água/azul petróleo exato do botão da foto */
+    background-color: #007B7F;
     cursor: pointer;
-    border: none;
 }
 
 .botao-login button a {
-    font-size: 18px;
-    color: #ffffff; /* Texto branco para destacar no botão */
+    font-size: 16px;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    text-decoration: none;
-}
-
-.botao-login button:hover {
-    background-color: #005F63;
 }
 
 .login-google button {
@@ -1367,7 +1230,6 @@ text-align: left;
     max-width: 420px;
     padding: 12px;
     border-radius: 20px;
-    outline: none;
     cursor: pointer;
     margin-bottom: 20px;
 }
@@ -1377,9 +1239,8 @@ text-align: left;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    font-size: 18px;
-    color: #333333; /* Texto escuro suave para o botão social */
-    text-decoration: none;
+    font-size: 15px;
+    color: #333333;
 }
 
 .login-google button img {
@@ -1391,8 +1252,8 @@ text-align: left;
     display: flex;
     align-items: center;
     gap: 15px;
-    background-color: #E6F8FA; /* Fundo ciano bem clarinho e suave, combinando com a foto */
-    padding: 10px 20px;
+    background-color: #E6F8FA;
+    padding: 10px 15px;
     width: 100%;
     max-width: 420px;
     border-radius: 10px;
@@ -1401,8 +1262,8 @@ text-align: left;
 }
 
 .cad-icone i {
-    font-size: 30px;
-    background-color: #13d4ff; /* Ícone com o fundo no azul ciano da marca */
+    font-size: 24px;
+    background-color: #13d4ff;
     color: #0A2533;
     padding: 8px;
     border-radius: 50%;
@@ -1411,95 +1272,75 @@ text-align: left;
 .pergunta {
     color: #000;
     font-weight: 500;
-}
-
-.criar-cad {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 13px;
 }
 
 .criar-cad a {
-    outline: none;
     color: #04cbea;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.criar-cad a:hover {
-    color: #0296ad;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .termos-cad {
-    margin-top: 30px;
-    position: relative;
+    margin-top: 20px;
     text-align: center;
     color: #555;
-    font-size: 13px;
-    flex-wrap: wrap;
+    font-size: 12px;
+    max-width: 420px;
 }
 
 .termos-cad a {
     color: #04cbea;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
 }
 
-/*Página sobre nos*/
-
-
-.container-sobre{
-   position: relative;
+/* ==========================================
+   PÁGINA SOBRE NÓS
+   ========================================== */
+.container-sobre {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
+
+.imagem-fundo {
+    width: 100%;
+    height: 420px;
+}
+
+.imagem-fundo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
 .sobre-box {
     position: absolute;
     top: 50%;
-    left: 6%;
+    left: 5%;
     transform: translateY(-50%);
-    z-index: 100;
+    z-index: 10;
     width: 90%;
-    max-width: 900px; /* Aumentamos um pouco aqui para dar espaço */
+    max-width: 850px;
 }
-.sobre{
-    position: relative;
-}
-/*Conteúdo da imagem*/
-.pagina-Sobre{
+
+.pagina-Sobre {
     color: #03ddff;
-    font-size: 600;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.sobre-text{
+.sobre-text {
     color: #ccc;
     font-weight: 600;
-    width: 370px;
-    letter-spacing: 2px;
-}
-
-.destaqueazul{
-    color: #03ddff;
-}
-
-.sobre-empresa{
-    position: relative; /* Mantém como você deixou */
-    display: flex;
-    justify-content: space-between; /* Joga um para cada ponta automaticamente */
-    align-items: flex-start;
+    font-size: clamp(22px, 3.5vw, 36px);
+    letter-spacing: 1px;
     width: 100%;
+    max-width: 500px;
 }
 
-.historia{
-    color: #ccc;
-    width: 480px;
-}
-
-.sobreFuturo{
-    color: #ccc;
-    width: 200px;
-}
 
 .sobre-empresa {
     display: flex;
@@ -1535,8 +1376,6 @@ text-align: left;
     text-align: right; 
     /* Alinha o texto bonitinho */
 }
-
-/* Corrigido o seletor para pegar direto a classe .sobreFuturo */
 .sobreFuturo::after {
     content: '';
     position: absolute;
@@ -1548,133 +1387,535 @@ text-align: left;
     border-radius: 50% 20% 40% 10%;
 }
 
-.fut-sobre .sobreFuturo{
-    position: absolute;
-    bottom: 20%;
-    left: 100%;
-
-}
-
-.nossa-historia{
+/* Seção Nossa História */
+.nossa-historia {
     display: flex;
     align-items: center;
-    margin-left: 150px;
-    gap: 40px;
-    margin-top: 30px;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
 }
 
-.alvo-box{
+.nossa-historia > div {
+    flex: 1 1 300px;
+    width: 100%;
+}
+
+.alvo-box {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
-.alvo-icone{
-    font-size: 30px;
+.alvo-icone {
+    font-size: 26px;
     color: #023826;
 }
-.historia-Nossa{
+
+.historia-Nossa {
     color: #023826;
+    font-size: 22px;
 }
-.text-historia{
+
+.text-historia {
     color: #555;
-    width: 500px;
+    font-size: 14px;
+    width: 100%;
+    line-height: 1.5;
 }
-
 
 .arrumando-carro {
     width: 100%;
     position: relative;
-    overflow: hidden; /* Evita que qualquer elemento interno ultrapasse os limites */
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .arrumando-carro img {
     width: 100%;
-    max-width: 500px;
-    height: auto;      /* Mantém a proporção correta da imagem para não distorcer */
-    display: block;    /* Remove espaços indesejados abaixo da imagem */
+    height: 320px;
+    object-fit: cover;
+    display: block;
     border-radius: 5px;
 }
 
-/*O que nos move*/
 .move {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 20; /* Corrigido de 20px para 20 */
+    bottom: 0%;
+    right: 0%;
+    z-index: 20;
     background-color: #0c2333;
-    padding: 25px;
-    border-radius: 5px;
-    opacity: 0.9;
+    padding: 100px 40px;
+    opacity: 0.95;
+    border-radius: 0 0 5px 5px;
 }
 
 .motivo-movente {
     color: #ccc;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .realizar-sonho {
     color: #ccc;
-    width: 250px;
-    font-size: 15px;
+    width: 220px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
+/* Seção Nossos Valores */
 .nossos-valores {
-    margin-left: 150px;
-    margin-top: 30px;
+    margin: 40px auto 0 auto;
     background-color: #bdd3d6;
     border-radius: 10px;
-    width: 100%; /* Corrigido de 100 para 100% */
-    max-width: 80%;
-    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 25px;
 }
 
 .diamante {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 10px;
+    padding: 0 10px 15px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-.historia-Nossa {
+.diamante .historia-Nossa {
     color: #0c2333;
+    font-size: 20px;
 }
 
-.text-historia {
+.diamante .text-historia {
     color: #334155;
+    font-size: 13px;
 }
 
 .valores {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: stretch;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 0;
+    gap: 15px;
 }
 
 .tipo-valores {
-    padding: 10px 20px;
-    text-align: center;
-    max-width: 250px;
+    padding: 10px;
     text-align: left;
+    flex: 1 1 200px;
 }
 
 .tipo-valores i {
     color: #0c2333;
     background-color: #bcebf2;
-    padding: 15px;
-    font-size: 30px;
+    padding: 10px;
+    font-size: 24px;
     border-radius: 50%;
-    
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
 .tipo {
     color: #0A2533;
-    margin-bottom: 8px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .valores-empresa {
-    color: #334155; /* Corrigido de verde para um tom escuro legível */
-    font-size: 14px;
+    color: #334155;
+    font-size: 12px;
     line-height: 1.4;
     width: 100%;
+}
+
+/* Seção O que oferecemos */
+.information-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    color: #333;
+    flex-wrap: wrap;
+}
+
+.information-sobre > div {
+    flex: 1 1 300px;
+    width: 100%;
+}
+
+.ferramenta-sobre {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.ferramenta-sobre img {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.pratica {
+    position: absolute;
+    left: 8%;
+    top: 15%;
+    font-family: 'Caveat', cursive;
+    z-index: 30;
+    font-weight: 600;
+    color: #fff;
+    font-size: 20px;
+    width: 150px;
+    transform: rotate(-15deg);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.pratica::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #40c8dc;
+    border-radius: 50% 20% 40% 10%;
+}
+
+.curso-informa {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.graduacao-icone i {
+    font-size: 26px;
+    color: #0c2333;
+}
+
+.faremos-text {
+    color: #0c2333;
+    font-size: 22px;
+}
+
+.pratica-mecanica {
+    color: #5e6c84;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.list-conteudo {
+    list-style: none;
+    padding: 0;
+}
+
+.conteudo-da-lista {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #5E6C84;
+    padding: 4px 0;
+    font-size: 13px;
+}
+
+.conteudo-da-lista i {
+    color: #fff;
+    background-color: #03ddff;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+/* ==========================================
+   RODAPÉ (FOOTER)
+   ========================================== */
+footer {
+    background-color: #102A3C;
+    border-top: 1px #4b4b4b solid;
+}
+
+.rodape-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.futuro { color: #ccc; font-size: 14px; line-height: 1.4; }
+.paginas-site li a { color: #ccc; font-size: 14px; }
+.paginas-site li a:hover { color: #40c8dc; }
+
+.Contato { text-align: left; }
+.contato-icone { display: flex; gap: 15px; margin-bottom: 10px; }
+.contato-icone i { font-size: 26px; color: #ccc; }
+.contato-icone i:hover { color: #40c8dc; }
+.disciplina { color: #ccc; font-size: 12px; }
+
+.direito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px rgba(255, 255, 255, 0.1) solid;
+    background-color: #102A3C;
+    padding: 15px 0 25px;
+}
+
+.reservados { 
+    color: #aaa;
+    font-size: 13px;
+}
+/* ===================================================
+   MEDIA QUERIES (RESPONSIVIDADE TOTAL E ADAPTAÇÃO MOBILE)
+   =================================================== */
+
+@media screen and (max-width: 1024px) {
+    .header-container { padding: 10px 20px; }
+    .rodape-container { padding: 30px 20px; }
+    .nivel, .card-box { padding: 30px 20px; }
+    .biblioteca-container { padding: 30px 20px; }
+}
+
+@media screen and (max-width: 992px) {
+    .btn-hamburguer { display: block; z-index: 9900; position: relative; }
+    
+    .menu-su {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        max-width: 240px;
+        height: 100vh;
+        background-color: #102a3c;
+        flex-direction: column;
+        padding: 70px 30px;
+        gap: 25px;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+        z-index: 998;
+        opacity: 0.9;
+    }
+
+    .menu-su.active { right: 0; }
+
+    .texto-aprenda, .texto-auto { font-size: 1.8rem; }
+    
+    /* Layout da Página de Login em coluna no mobile */
+    .login-box {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+    }
+
+    .container-cade {
+        width: 100%;
+        min-height: 320px;
+    }
+
+    .container-login {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .biblioteca-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .analise-problema {
+        position: relative;
+        max-width: 100%;
+    }
+
+    /* Aumenta o tamanho da imagem da seção de análise e coloca o bloco de texto sobre ela no mobile */
+    .motor-carro img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .solução {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        margin-top: 0;
+        background-color: rgba(16, 42, 60, 0.92);
+        border-radius: 10px;
+        z-index: 30;
+    }
+
+    /* Garante que o bloco de texto principal e o Sobre fiquem perfeitamente sobre a imagem de fundo de forma responsiva */
+    .conteudo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 25px 20px;
+    }
+
+    .sobre-box {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        padding: 10px;
+        width: 90%;
+    }
+
+    .container-sobre .imagem-fundo {
+        height: 400px;
+        min-height: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo {
+        padding: 25px 20px;
+        position: absolute;
+    }
+
+    .hero-wrapper {
+        min-height: 400px;
+    }
+    .conteudo{
+        margin-top: 80px;
+    }
+    .icone-direita{
+        display: none;
+    }
+    .imagem-fundo img {
+        height: 40 0px;
+    }
+
+    .texto-aprenda, .texto-auto { font-size: 1.4rem; width: 100%; }
+
+    .comecar { flex-direction: column; align-items: flex-start; }
+    .conhecimento p, .conheci p { transform: none; max-width: 100%; }
+    .conhecimento .motivacao, .conheci { position: static; }
+    .info-linha,.motivacao, .sobreFuturo,  .motiva { display: none; }
+    .informacao { flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 0; }
+    
+    .card-ferramenta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-peca {
+        width: 100%;
+    }
+
+    .destaque-box {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+
+    .nossa-historia, .information-sobre {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sobre-empresa {
+        flex-direction: column;
+    }
+
+    .rodape-container { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+    
+    .Contato { text-align: center; width: 100%; }
+    .contato-icone { justify-content: center; }
+
+    /* Ajuste fino para o texto sobre a imagem na seção de diagnóstico em telas menores */
+    .solução {
+        padding: 15px;
+        position: absolute;
+        bottom: 50%;
+        left: 30%;
+    }
+    
+    .motor-carro img {
+        height: 420px;
+    }
+
+    .pratica{
+        position: absolute;
+        left: 60%;
+        top: 20%;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-menu { width: 140px; }
+    .texto-aprenda, .texto-auto { font-size: 1.1rem; }
+    
+    .card-box {
+        padding: 10px;
+    }
+
+    .nivel {
+        padding: 20px 15px;
+    }
+
+    .escolha-nivel {
+        font-size: 20px;
+    }
+
+    .card-ferramenta {
+        grid-template-columns: 1fr;
+    }
+
+    .novo {
+        top: 10%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .frase-usu {
+        font-size: 20px;
+    }
+
+    .barra-circulo, .circulo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .barra-interna {
+        width: 50px;
+        height: 50px;
+    }
+
+    .motor-carro img {
+        height: 450px;
+    }
+
+    .solução {
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+        padding: 12px;
+    }
 }
