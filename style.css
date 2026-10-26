@@ -1034,6 +1034,7 @@ body {
     width: 100%;
     min-height: calc(100vh - 80px);
     background-color: #ffffff;
+    margin-top: 60px;
 }
 
 .container-cade {
@@ -1048,7 +1049,7 @@ body {
 
 .imagem-carro img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     display: block;
 }
@@ -1866,10 +1867,10 @@ footer {
         top: 20%;
 
     }
-
-    .login-box{
+ .login-box{
         margin-top: 40px;
     }
+   
 }
 
 @media screen and (max-width: 480px) {
