@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Curso de Mecânica</title>
+</head>
+
+<body>
+
+
+    <header class="header-container">
+        <nav class="nav-bar">
+            <img src="/Front-end/assets/img/logo.png" alt="Mecânica na Prática" class="logo-menu">
+
+            <ul class="menu-su" id="menuSu">
+                <li class="list"><a href="/index.html">Início</a></li>
+                <li class="list"><a href="/Front-end/pages/curso.html">Cursos</a></li>
+                <li class="list"><a href="#">Níveis</a></li>
+                <li class="list"><a href="#">Biblioteca</a></li>
+                <li class="list"><a href="/Front-end/pages/sobre.html">Sobre</a></li>
+            </ul>
+
+            <div class="button-entrar">
+                <div class="lupa"><i class='bx bx-search'></i></div>
+                <button type="button" class="Entrar"><a href="/Front-end/pages/entrar.html"><i class='bx bx-user'></i>Entrar</a></button>
+                <button class="btn-hamburguer" id="btnHamburguer" onclick="toggleMenu()">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+      
+<div class="cade-container">
+    <!-- Seção Esquerda (Banner/Imagem) -->
+    <div class="mecanico-banner-wrapper">
+        <div class="mecanico-cad">
+            <img src="/Front-end/assets/img/cad-img.png" alt="mecanico-cadastro">
+        </div>
+        <div class="criar-cada">
+            <h3 class="criar-conta">Crie sua conta</h3>
+            <h1 class="comecando-jorna">Comece sua jornada <span class="dest-conta">Na mecânica</span></h1>
+            
+            <p class="incentivando">Cadastre-se agora e tenha acesso a todos os cursos, níveis e conteúdos exclusivos da Mecânica na Prática. Aprenda no seu ritmo, onde estiver, e construa o seu futuro!</p>
+            
+            <div class="bloco-icone">
+                <div class="icone-acesso"><i class='bx bx-book-open'></i></div>
+                <div class="coisas-cursos">
+                    <h4 class="acesse-curso">Acesso aos seus cursos</h4>
+                    <p class="continuar-login">Continue onde parou.</p>
+                </div>
+            </div>
+
+            <div class="bloco-icone">
+                <div class="icone-acesso"><i class='bx bx-bar-chart-alt-2'></i></div>
+                <div class="coisas-cursos">
+                    <h4 class="acesse-curso">Acompanhe seu progresso</h4>
+                    <p class="continuar-login">Veja sua evolução e conquistas.</p>
+                </div>
+            </div>
+
+            <div class="bloco-icone">
+                <div class="icone-acesso"><i class='bx bx-badge-check'></i></div>
+                <div class="coisas-cursos">
+                    <h4 class="acesse-curso">Conteúdo exclusivo</h4>
+                    <p class="continuar-login">Materiais, exercícios e muito mais.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Direita (Formulário) -->
+    <form action="" class="form-cad">
+        <div class="cad-home">
+            <div class="icone-cadastro-home"><i class='bx bxs-user-plus'></i></div>
+            <div>
+                <h2 class="cad-conta">Cadastro</h2>
+                <p class="preencha-conta">Preencha os dados abaixo para criar sua conta.</p>
+            </div>
+        </div>
+
+        <div class="conta-input">
+            <div class="cont-label">
+                <div class="label-cad"><label for="nameUsuario" class="cad-label">Nome completo *</label></div>
+                <div class="input-icone">
+                    <input type="text" id="nameUsuario" name="name" placeholder="Nome completo" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+            </div>
+
+            <div class="cont-label">
+                <div class="label-cad"><label for="email">E-mail *</label></div>
+                <div class="input-icone">
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+                    <i class="bx bx-envelope"></i>
+                </div>
+            </div>
+
+            <div class="cont-label">
+                <div class="label-cad"><label for="password">Senha *</label></div>
+                <div class="input-icone">
+                    <input type="password" name="password" id="password" placeholder="Crie sua senha" required>
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+            </div>
+
+            <div class="cont-label">
+                <div class="label-cad"><label for="confirm-senha">Confirmar senha *</label></div>
+                <div class="input-icone">
+                    <input type="password" name="confirmar-password" id="confirm-senha" placeholder="Confirme sua senha" required>
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+            </div>
+
+            <div class="cont-label">
+                <div class="label-cad"><label for="date">Data de nascimento *</label></div>
+                <div class="input-icone">
+                    <input type="date" name="date" id="date" required>
+                </div>
+            </div>
+
+            <div class="cont-label">
+                <div class="label-cad"><label for="tel">Telefone <span>(opcional)</span></label></div>
+                <div class="input-icone">
+                    <input type="tel" name="tel" id="tel" placeholder="(xx) xxxxx-xxxx">
+                    <i class="bx bxs-phone"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkbox-cad">
+            <input type="checkbox" name="checkbox" id="checkbox"> 
+            <p>Eu concordo com os <a href="#">Termos</a> e a <a href="#">Políticas de Privacidade</a>.</p>
+        </div>
+
+        <button type="submit" class="botao-cad">Cadastrar</button>
+        
+        <p class="continuar">ou continuar com</p>
+
+        <button type="button" class="cad-google">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google"> Cadastrar com Google
+        </button>
+
+        <p class="login-redirect">Já tem uma conta? <a href="/Front-end/pages/entrar.html">Entre aqui</a></p>
+    </form>
+</div>
+
+    </body>
+    </html>

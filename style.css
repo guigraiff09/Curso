@@ -197,6 +197,7 @@ body {
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.5;
+      margin-bottom: 20px;
 }
 
 .dest-avançado {
@@ -209,6 +210,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+      margin-bottom: 20px;
 }
 
 .conhecimento p,
@@ -1142,9 +1144,7 @@ body {
 }
 
 .continuar-log {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: left;
     width: 100%;
     color: #666666;
     font-size: 13px;
@@ -1203,16 +1203,13 @@ body {
 .botao-login button {
     width: 100%;
     max-width: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 12px;
     border-radius: 30px;
-    background-color: #007B7F;
+    background-color: #02b5d0;
     cursor: pointer;
 }
 
-.botao-login button a {
+.botao-login button  {
     font-size: 16px;
     color: #ffffff;
     display: flex;
@@ -1644,7 +1641,247 @@ body {
     font-size: 11px;
 }
 
-/* ==========================================
+/* Tela de Cadastro */
+.cade-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.mecanico-cad img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.mecanico-banner-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.criar-cada {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    z-index: 10;
+}
+
+.criar-conta {
+    text-transform: uppercase;
+    color: #13d4ff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.comecando-jorna {
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.incentivando, .comecando-jorna {
+    width: 380px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.dest-conta {
+    color: #13d4ff;
+}
+
+.bloco-icone {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.icone-acesso {
+    font-size: 24px;
+    color: #13d4ff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.acesse-curso {
+    color: #fff;
+    font-size: 16px;
+}
+
+.continuar-login {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+/* Formulário de Cadastro */
+.form-cad {
+    flex: 1;
+    padding: 40px;
+    max-width: 650px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.cad-home {
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.icone-cadastro-home i {
+    font-size: 40px;
+    color: #03ddff;
+}
+
+.cad-conta {
+    color: #0A2533;
+    font-size: 24px;
+}
+
+.preencha-conta {
+    color: #5E6C84;
+    font-size: 14px;
+}
+
+.conta-input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cont-label {
+    width: 100%;
+}
+
+.label-cad {
+    margin-bottom: 6px;
+    color: #0b1d29;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Ajuste específico para inputs com ícones */
+.input-icone {
+    position: relative;
+    width: 100%;
+}
+
+.conta-input input {
+    border: 1px solid #D1D9E0;
+    border-radius: 10px;
+    width: 100%;
+    padding: 8px 15px 8px 40px; /* Espaço à esquerda para o ícone */
+    font-size: 14px;
+    background-color: #f8fafc;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Tratamento especial para o input de Data (sem ícone esquerdo) */
+.conta-input input[type="date"] {
+    padding-left: 15px; 
+}
+
+.conta-input input:focus {
+    border-color: #04cbea;
+    background-color: #fff;
+}
+
+.conta-input input::placeholder {
+    color: #94a3b8;
+}
+
+.input-icone i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666666;
+    font-size: 18px;
+}
+
+.checkbox-cad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #334155;
+}
+
+.botao-cad {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    background-color: #04cbea;
+    color: #fff;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.botao-cad:hover {
+    background-color: #02b5d0;
+}
+
+.cad-google {
+    border-radius: 8px;
+    border: 1px solid #D1D9E0;
+    width: 100%;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cad-google img {
+    width: 18px;
+    height: 18px;
+}
+
+.continuar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-size: 13px;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.continuar::before,
+.continuar::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #D1D9E0;
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.login-redirect a {
+    color: #04cbea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ================== ========================
    RODAPÉ (FOOTER)
    ========================================== */
 footer {
