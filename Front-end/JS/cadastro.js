@@ -41,7 +41,7 @@ formCadastro.addEventListener('submit', async (event) => {
         botaoCadastro.disabled = true;
         botaoCadastro.textContent = 'Cadastrando...';
 
-        const resposta = await fetch('http://localhost:3000/usuarios', {
+        const resposta = await fetch('https://cur-delta.vercel.app/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

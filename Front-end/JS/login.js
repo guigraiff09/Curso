@@ -45,7 +45,7 @@ if (formLogin) {
 
         try {
 
-            const resposta = await fetch('http://localhost:3000/login', {
+            const resposta = await fetch('https://cur-delta.vercel.app', {
 
                 method: 'POST',
 
