@@ -28,6 +28,9 @@ function verificarLogin() {
         if (perfil) {
             perfil.style.display = 'none';
         }
+        if(usuarioLogado) {
+            alert('olá, seja bem-vindo ' + sessionStorage.getItem('usuario'));
+        }
     }
 }
 
@@ -45,7 +48,7 @@ if (formLogin) {
 
         try {
 
-            const resposta = await fetch('https://cur-delta.vercel.app', {
+            const resposta = await fetch('https://cur-delta.vercel.app',{
 
                 method: 'POST',
 
