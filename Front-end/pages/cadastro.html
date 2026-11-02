@@ -31,6 +31,7 @@
                 <button class="btn-hamburguer" id="btnHamburguer" onclick="toggleMenu()">
                     <i class='bx bx-menu'></i>
                 </button>
+                 <div class="perfil"> <img src="/Front-end/assets/img/peril.jpeg" alt="perfil" id="imgPerfil"></div>
             </div>
         </nav>
     </header>
@@ -75,7 +76,7 @@
     </div>
 
     <!-- Seção Direita (Formulário) -->
-    <form action="" class="form-cad">
+    <form class="form-cad" id="formCadastro">
         <div class="cad-home">
             <div class="icone-cadastro-home"><i class='bx bxs-user-plus'></i></div>
             <div>
@@ -134,7 +135,7 @@
         </div>
 
         <div class="checkbox-cad">
-            <input type="checkbox" name="checkbox" id="checkbox"> 
+            <input type="checkbox" name="checkbox" id="checkbox" required> 
             <p>Eu concordo com os <a href="#">Termos</a> e a <a href="#">Políticas de Privacidade</a>.</p>
         </div>
 
@@ -149,6 +150,7 @@
         <p class="login-redirect">Já tem uma conta? <a href="/Front-end/pages/entrar.html">Entre aqui</a></p>
     </form>
 </div>
-
+   
+<script src="/Front-end/JS/cadastro.js"></script>
     </body>
     </html>
