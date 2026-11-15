@@ -1,44 +1,112 @@
 const formLogin = document.getElementById('formLogin');
 const mensagemLogin = document.getElementById('mensagemLogin');
 
-// FUNÇÃO PARA ALTERAR OS BOTÕES
+// ========================================
+// VERIFICAR SE O USUÁRIO ESTÁ LOGADO
+// ========================================
+
+function obterUsuarioLogado() {
+    const usuario = sessionStorage.getItem('usuario');
+
+    if (!usuario) {
+        return null;
+    }
+
+    try {
+        return JSON.parse(usuario);
+    } catch (error) {
+        console.error('Erro ao recuperar usuário:', error);
+        sessionStorage.removeItem('usuario');
+        return null;
+    }
+}
+
+// ========================================
+// ALTERAR BOTÕES DO MENU
+// ========================================
+
 function verificarLogin() {
+    const usuarioLogado = obterUsuarioLogado();
 
-    const usuarioLogado = sessionStorage.getItem('usuario');
-
-    const perfil = document.querySelector('.perfil');
-    const entrarUsu = document.querySelector('.Entrar');
+    const perfil = document.getElementById('imgPerfil');
+    const entrar = document.querySelector('.Entrar');
 
     if (usuarioLogado) {
-
-        if (entrarUsu) {
-            entrarUsu.style.display = 'none';
+        if (entrar) {
+            entrar.style.display = 'none';
         }
 
         if (perfil) {
             perfil.style.display = 'block';
         }
-
     } else {
-
-        if (entrarUsu) {
-            entrarUsu.style.display = 'block';
+        if (entrar) {
+            entrar.style.display = 'block';
         }
 
         if (perfil) {
             perfil.style.display = 'none';
         }
-        if(usuarioLogado) {
-            alert('olá, seja bem-vindo ' + sessionStorage.getItem('usuario'));
-        }
     }
 }
 
-// LOGIN
+// ========================================
+// CARREGAR DADOS DO PERFIL
+// ========================================
+
+function carregarDadosPerfil() {
+    const usuario = obterUsuarioLogado();
+
+    if (!usuario) {
+        return;
+    }
+
+    const nameUsuario = document.getElementById('nameUsuario');
+    const nomeSimples = document.getElementById('nome-simples');
+    const emailUsuario = document.querySelectorAll('.emailusuario');
+    const anoCad = document.querySelectorAll('[data-email-perfil]');
+
+    if (nameUsuario) {
+        nameUsuario.textContent = usuario.nome_completo || 'Usuário';
+    }
+
+    if (nomeSimples) {
+        nomeSimples.textContent =
+            usuario.nome_completo?.split(' ')[0] || 'Usuário';
+    }
+
+    if (emailUsuario) {
+            emailUsuario.forEach(elemento => {
+        elemento.textContent = usuario.email || 'Email não disponível';
+    });
+
+    }
+
+
+if (anoCad.length > 0) {
+    if (usuario.criado_em) {
+        const dataCadastro = new Date(usuario.criado_em);
+
+        anoCad.forEach(elemento => {
+            elemento.textContent = Number.isNaN(dataCadastro.getTime())
+                ? 'Data não disponível'
+                : dataCadastro.toLocaleDateString('pt-BR');
+        });
+
+    } else {
+        anoCad.forEach(elemento => {
+            elemento.textContent = 'Data não disponível';
+        });
+    }
+}
+}
+
+// ========================================
+// REALIZAR LOGIN
+// ========================================
+
 if (formLogin) {
-
     formLogin.addEventListener('submit', async (event) => {
-
         event.preventDefault();
 
         const email = document.getElementById('email').value.trim();
@@ -47,31 +115,30 @@ if (formLogin) {
         mensagemLogin.textContent = 'Verificando seus dados...';
 
         try {
-
-            const resposta = await fetch('https://cur-delta.vercel.app',{
-
+            const resposta = await fetch('http://localhost:3000/login', {
                 method: 'POST',
-
                 headers: {
                     'Content-Type': 'application/json'
                 },
-
                 body: JSON.stringify({
                     email,
                     senha
                 })
-
             });
 
             const dados = await resposta.json();
 
+            console.log('Usuário recebido:', dados.usuario);
+            console.log('Data de cadastro:', dados.usuario?.criado_em);
+
             if (!resposta.ok) {
+                mensagemLogin.textContent =
+                    dados.message || 'Email ou senha incorretos.';
 
-                mensagemLogin.textContent = dados.message;
                 return;
-
             }
 
+            // SALVAR TODOS OS DADOS DO USUÁRIO
             sessionStorage.setItem(
                 'usuario',
                 JSON.stringify(dados.usuario)
@@ -79,20 +146,23 @@ if (formLogin) {
 
             mensagemLogin.textContent = 'Login realizado com sucesso!';
 
+            // REDIRECIONAR PARA A PÁGINA INICIAL
             window.location.href = '/index.html';
 
-        } catch (erro) {
-
-            console.error('Erro no login:', erro);
+        } catch (error) {
+            console.error('Erro ao realizar login:', error);
 
             mensagemLogin.textContent =
-                'Erro ao conectar com o servidor.';
-
+                'Não foi possível conectar ao servidor.';
         }
-
     });
-
 }
 
-// VERIFICAR USUÁRIO AO CARREGAR A PÁGINA
-verificarLogin();
+// ========================================
+// EXECUTAR AO ABRIR A PÁGINA
+// ========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    verificarLogin();
+    carregarDadosPerfil();
+});

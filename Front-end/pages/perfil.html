@@ -12,33 +12,369 @@
 
 <body>
 
+    <header class="header-contai">
+        <nav class="nav-contai">
 
-    <header class="header-container">
-        <nav class="nav-bar">
-            <img src="/Front-end/assets/img/logo.png" alt="Mecânica na Prática" class="logo-menu">
-
-            <ul class="menu-su" id="menuSu">
-                <li class="list"><a href="/index.html">Início</a></li>
-                <li class="list1"><a href="/Front-end/pages/curso.html">Cursos</a></li>
-                <li class="list"><a href="#">Níveis</a></li>
-                <li class="list"><a href="#">Biblioteca</a></li>
-                <li class="list"><a href="/Front-end/pages/sobre.html">Sobre</a></li>
-            </ul>
-
-            <div class="button-entrar">
-                <div class="lupa"><i class='bx bx-search'></i></div>
-                <button type="button" class="Entrar"><a href="/Front-end/pages/entrar.html"><i class='bx bx-user'></i>Entrar</a></button>
-                <button class="btn-hamburguer" id="btnHamburguer" onclick="toggleMenu()">
-                    <i class='bx bx-menu'></i>
-                </button>
-                  <div class="perfil"><a href="/Front-end/pages/perfil.html"><img src="/Front-end/assets/img/peril.jpeg" alt="perfil" id="imgPerfil"></a></div>
+            <div class="input-group">
+                <input type="text"
+                    placeholder="Pesquisar cursos, aulas ou tópicos..."
+                    class="input-pesquisa">
+                <i class='bx bx-search'></i>
             </div>
+
+            <div class="perfilusua">
+                <img src="/Front-end/assets/img/peril.jpeg"
+                    alt="Foto de perfil do usuário"
+                    id="imgPerfil"
+                    class="perfilusuario2">
+
+                <span class="nome-usuario" id="nome-simples"></span>
+            </div>
+
         </nav>
     </header>
 
-    <main>
-        
+    <aside class="menu-lateral">
+
+        <div class="logo-contai">
+            <img src="/Front-end/assets/img/logo-conf.png"
+                alt="Logo Mecânica na Prática"
+                class="logo">
+
+            <h1 class="logo-tex">
+                Mecânica <span class="logo-dest">na Prática</span>
+            </h1>
+        </div>
+
+        <nav class="menu-box">
+
+            <ul class="menu-lista-principal">
+
+                <li class="list-per">
+                    <a href="/index.html">
+                        <i class='bx bx-home-alt'></i> Início
+                    </a>
+                </li>
+
+                <li class="list-per">
+                    <a href="/Front-end/pages/curso.html">
+                        <i class='bx bx-book-open'></i> Cursos
+                    </a>
+                </li>
+
+                <li class="list-per">
+                    <a href="/Front-end/pages/niveis.html">
+                        <i class='bx bx-bar-chart-alt-2'></i> Níveis
+                    </a>
+                </li>
+
+                <li class="list-per">
+                    <a href="#">
+                        <i class='bx bx-book-bookmark'></i> Biblioteca
+                    </a>
+                </li>
+
+                <li class="list-per">
+                    <a href="/Front-end/pages/sobre.html">
+                        <i class='bx bx-info-circle'></i> Sobre
+                    </a>
+                </li>
+
+                <li class="list-per">
+                    <a href="/Front-end/pages/contato.html">
+                        <i class='bx bx-phone'></i> Contato
+                    </a>
+                </li>
+
+                <li class="list-per ativo">
+                    <a href="/Front-end/pages/perfil.html">
+                        <i class='bx bx-user'></i> Perfil
+                    </a>
+                </li>
+
+            </ul>
+
+            <hr class="menu-divisor">
+
+            <ul class="menu-lista-sistema">
+
+                <li class="list-per">
+                    <a href="#">
+                        <i class='bx bx-help-circle'></i> Ajuda
+                    </a>
+                </li>
+
+                <li class="list-per">
+                    <a href="#">
+                        <i class='bx bx-cog'></i> Configurações
+                    </a>
+                </li>
+
+                <li class="list-per">
+                    <a href="#">
+                        <i class='bx bx-log-out'></i> Sair
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <!-- Área superior do perfil -->
+        <section class="perfil-container">
+
+            <img src="/Front-end/assets/img/Engrenagens.png"
+                alt="Imagem de engrenagens"
+                class="engrenagem-perfil">
+
+            <!-- Dados do usuário -->
+            <div class="dados-perfil">
+
+                <div>
+                    <img src="/Front-end/assets/img/peril.jpeg"
+                        alt="Imagem de perfil do usuário"
+                        class="imagem-principal">
+                </div>
+
+                <div>
+                    <h2 class="nome-perfil">
+                        <span id="nameUsuario"></span>
+                    </h2>
+
+                    <p class="email-usuario">
+                        <i class='bx bx-envelope'></i>
+                        <span class="emailusuario"></span>
+                    </p>
+
+                    <p class="data-membro">
+                        <i class='bx bx-calendar'></i>
+                        Membro desde: <span class="anoCad" data-email-perfil></span>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Mensagem motivacional -->
+            <div class="mensagem-perfil">
+                <h2 class="disciplina-perfil">
+                    Disciplina hoje, é liberdade amanhã.
+                </h2>
+            </div>
+
+        </section>
+
+        <hr class="linha-perfil">
+
+        <!-- Cards de informações -->
+        <section class="cursos-conclui">
+
+            <div class="cursos-concluidos-temp">
+
+                <div class="icone-cursos">
+                    <i class='bx bx-book-open'></i>
+                </div>
+
+                <div>
+                    <h3 class="numero-cur">Número de Cursos</h3>
+                    <p class="cursos-concluidoss">
+                        Cursos concluídos: 5
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="cursos-concluidos-temp">
+
+                <div class="icone-cursos">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+
+                <div>
+                    <h3 class="numero-cur">48H+</h3>
+                    <p class="cursos-concluidoss">
+                        de aprendizado
+                    </p>
+                </div>
+
+            </div>
+            <div class="cursos-concluidos-temp">
+
+                <div class="icone-cursos">
+                    <i class='bx bx-bar-chart-alt-2'></i>
+                </div>
+
+                <div>
+                    <h3 class="numero-cur">78%</h3>
+                    <p class="cursos-concluidoss">
+                        de progresso geral
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="container-editar">
+           <div class="editar-perfil">
+             <div class="sobre-mim">
+                <div class="icone-sobreMim"><i class='bx bxs-user'></i><h3 class="sobre-mim">Sobre mim</h3></div>
+                <p class="editar"><i class='bx bx-pencil'></i> Editar</p>
+              
+            </div>
+            <div class="local">
+                <p class="bio">Olá, este é onde vai mostrar a bio!</p>
+                <p class="mapa"><i class='bx bx-map'></i><span id="endereco">Brasil</span></p>
+
+                <p class="data-edite"><i class='bx bx-calendar'></i>
+                        Membro desde: <span class="anoCad1" data-email-perfil></span>
+                    </p>
+
+                 <p class="email-usuario">
+                        <i class='bx bx-envelope'></i>
+                        <span class="emailusuario"></span>
+                    </p>
+
+            </div>
+           </div>
+
+            <div class="cursos-content">
+
+    <div class="curso-linha">
+
+        <div class="CursosMeus">
+            <div class="icone-cursoLi">
+                <i class='bx bx-book-open'></i>
+            </div>
+
+            <div>
+                <p class="icone-MCurso">Meus Cursos</p>
+            </div>
+        </div>
+
+        <p class="ver-cursos">
+            <a href="#">
+                Ver todos
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+        </p>
+
+    </div>
+
+   <div class="content-carde">
+    <button type="button" class="btn-button"><i class='bx bx-chevron-left'></i></button>
+     <div class="card-biblioteca-per">
+
+        <div class="motor-basico">
+            <img src="/Front-end/assets/img/MetalAzulCinemático-1.png" alt="motor">
+        </div>
+
+        <div>
+            <h4 class="meca-basica">Mecânica Básica</h4>
+        </div>
+
+        <div class="perfilbarra">
+
+            <div class="barraPer">
+                <div class="Progressoper"></div>
+            </div>
+
+            <div>
+                <span class="porcentagem-barra">20%</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card-biblioteca-per">
+
+        <div class="motor-basico">
+            <img src="/Front-end/assets/img/Suspensão.png" alt="motor">
+        </div>
+
+        <div>
+            <h4 class="meca-basica">Suspensão e Direção</h4>
+        </div>
+
+        <div class="perfilbarra">
+
+            <div class="barraPer">
+                <div class="Progressoper"></div>
+            </div>
+
+            <div>
+                <span class="porcentagem-barra">20%</span>
+            </div>
+
+        </div>
+
+    </div>
+    <button type="button" class="btn-button"><i class='bx bx-chevron-right'></i></button>
+   </div>
+
+</div>
+               
+           </div>
+        </section>
+
+        <section class="content-rapida-config">
+            <div class="card-config">
+                <div class="config-rapida">
+                    <div class="userconfig"><i class="bx bxs-user"></i></div>
+                    <div class="configrap"><h3>Configurações Rápidas</h3></div>
+                </div>
+
+              <div class="content-proteçao">
+
+                  <div class="altsenha">
+                    <div class="iconesenha"><i class='bx bx-lock-alt'></i></div>
+                    <p class="senhanova">Alterar Senha</p>
+                </div>
+
+                  <div class="altsenha">
+                    <div class="iconesenha"><i class='bx bx-bell'></i></div>
+                    <p class="senhanova">Notificação</p>
+                </div>
+
+                <div class="altsenha">
+                    <div class="iconesenha"><i class='bx bx-palette'></i></div>
+                    <p class="senhanova">Tema</p>
+                </div>
+
+                 <div class="altsenha">
+                    <div class="iconesenha"><i class='bx bx-shield'></i></div>
+                    <p class="senhanova">Privacidade</p>
+                </div>
+
+                
+              </div>
+             
+            </div>
+
+             <div class="contentConhecimento">
+                     <div class="centroConfig">
+                        <div class="CusosConhecimento">
+                         <div class="imagemPerConfig"><img src="/Front-end/assets/img/logo-conf.png" alt="">
+                        </div>
+
+                        <div class="estudosCursos">
+                            <h3 class="contiEstudos">Continuar estudadando!</h3>
+                            <p class="chaveConhecimento">O conhecimento é a chave para você ir mais longe.</p> 
+                        </div>
+                        <p class="exploreCurso"><a href="/Front-end/pages/curso.html">Explorar Cursos <i class='bx bx-right-arrow-alt'></i></a></p>
+                     </div>
+                     </div>
+              </div>
+
+            
+        </section>
+
     </main>
 
-    </body>
-    </html>
+    <script src="/Front-end/JS/login.js"></script>
+
+</body>
+</html>
